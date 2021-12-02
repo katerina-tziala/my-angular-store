@@ -12,28 +12,12 @@
       <p class="product-category">
         {{ product.category }}
       </p>
-      <p class="font-semibold product-title">{{ product.title }}</p>
+      <p class="product-title">{{ product.title }}</p>
 
-      <div class="rating-stars text-gray-300">
-        <div class="rating-stars-container">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <div class="rating-percentage text-yellow-300">
-          <div class="rating-stars-container">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-        </div>
-      </div>
 
-      <!-- <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"> </i> -->
+      <span>{{product.rating.rate}}</span>
+      <app-rating-stars [rating]="product.rating.rate"></app-rating-stars>
+      <span>({{product.rating.count}})</span>
     </li>
   </ul>
 </ng-container>
