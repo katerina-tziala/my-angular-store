@@ -4,13 +4,36 @@
       *ngFor="let product of products; trackBy: trackProduct"
       class="product-list-item"
     >
-      <div
-        class="city-background"
+      <span
+        class="product-photo"
         [style.background-image]="'url(' + product.image + ')'"
-      ></div>
+      ></span>
 
-      <p class="capitalize text-sm font-semibold italic text-main-color-400">{{ product.category }}</p>
-      <p class="font-semibold product-title ">{{ product.title }}</p>
+      <p class="product-category">
+        {{ product.category }}
+      </p>
+      <p class="font-semibold product-title">{{ product.title }}</p>
+
+      <div class="rating-stars text-gray-300">
+        <div class="rating-stars-container">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="rating-percentage text-yellow-300">
+          <div class="rating-stars-container">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"> </i> -->
     </li>
   </ul>
 </ng-container>

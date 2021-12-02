@@ -43,3 +43,6 @@ Order confirmation page, which shows the outcome after the user completes the ch
 
 
 <!-- nvm use v14.18.1 -->
+
+
+<!-- tailwind fontawesome -->
