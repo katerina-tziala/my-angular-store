@@ -25,3 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<!-- 
+Enable a signup/login flow using Auth0.
+Incorporate the back end built in the second course of this Nanodegree program to persist data.
+Apply your own styling to the application.
+Show an item amount “badge” next to the link for your shopping cart. Additionally, show the properly-calculated cart total in the cart. When no items are in the cart, indicate that the cart is empty. -->
+
+<!-- Project features
+Your application reflects the same user experience as that of a real-world e-commerce website, including a(n):
+
+Product list page, which displays the available products for the user to choose and add to their cart (in various quantities)
+Product details page, which displays more information about any particular product
+Shopping cart, which includes the products that the user has added to their cart
+Checkout form, which collects information about the user (e.g., name, address, payment details, etc.)
+Order confirmation page, which shows the outcome after the user completes the checkout process (i.e., submits the checkout form) -->
+
+
+<!-- nvm use v12.22.7 -->
