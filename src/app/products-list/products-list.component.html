@@ -1,0 +1,16 @@
+<ng-container *ngIf="products$ | async as products">
+  <ul class="products-list">
+    <li
+      *ngFor="let product of products; trackBy: trackProduct"
+      class="product-list-item"
+    >
+      <div
+        class="city-background"
+        [style.background-image]="'url(' + product.image + ')'"
+      ></div>
+
+      <p class="capitalize text-sm font-semibold italic text-main-color-400">{{ product.category }}</p>
+      <p class="font-semibold product-title ">{{ product.title }}</p>
+    </li>
+  </ul>
+</ng-container>
