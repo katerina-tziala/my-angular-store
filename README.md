@@ -42,4 +42,4 @@ Checkout form, which collects information about the user (e.g., name, address, p
 Order confirmation page, which shows the outcome after the user completes the checkout process (i.e., submits the checkout form) -->
 
 
-<!-- nvm use v12.22.7 -->
+<!-- nvm use v14.18.1 -->
