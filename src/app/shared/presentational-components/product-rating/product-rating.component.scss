@@ -1,0 +1,22 @@
+:host {
+  @apply flex flex-wrap justify-items-start content-end items-center;
+  width: fit-content;
+}
+
+%rating-text {
+  @apply text-gray-500;
+  display: inline-block;
+}
+
+.rating-value {
+  @apply pr-1.5;
+  font-size: 22px;
+  line-height: 23px;
+  height: 20px;
+  @extend %rating-text;
+}
+
+.rating-count {
+  @apply font-light text-sm pl-1.5;
+  @extend %rating-text;
+}

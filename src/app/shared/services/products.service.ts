@@ -5,7 +5,7 @@ import {
   HttpParamsOptions,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from '../shared/models/models';
+import { Product } from '../models/models';
 @Injectable({
   providedIn: 'root',
 })

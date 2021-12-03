@@ -7,7 +7,7 @@
 }
 
 .product-list-item {
-  @apply bg-white text-black rounded overflow-hidden shadow-lg m-3.5 p-4;
+  @apply bg-white text-black  overflow-hidden p-4;
   max-width: 280px;
   width: 100%;
 
@@ -38,7 +38,7 @@
     py-1
     px-2.5
     bg-main-color-500
-    my-2;
+    mt-2;
 }
 
 .product-title {
