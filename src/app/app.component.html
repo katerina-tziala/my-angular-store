@@ -1,10 +1,9 @@
-
-
-
-<!-- app component -->
-
-
-
-<router-outlet></router-outlet>
-
-<!-- <app-products-list></app-products-list> -->
+<h1 class="header">
+  <a href="" [routerLink]="['proucts']" class="header-link">
+    <i class="fas fa-store"></i>
+    <span class="header-title">My Store</span>
+  </a>
+</h1>
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>

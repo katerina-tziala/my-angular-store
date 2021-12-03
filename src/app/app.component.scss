@@ -1,8 +1,26 @@
 :host {
-  @apply bg-white;
-  display: block;
-  width: 100%;
-  height: 100%;
+  @apply flex flex-col h-full w-full bg-white;
   position: relative;
-  overflow: hidden;
+}
+
+.header {
+  @apply bg-main-color-500 py-3 px-4 text-white text-2xl shadow-lg;
+}
+
+.header-link {
+  @apply flex justify-start items-center;
+
+  &:hover {
+    > .header-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header-title {
+  @apply inline-block px-2;
+}
+
+.app-content {
+  @apply flex-grow overflow-y-auto p-2;
 }

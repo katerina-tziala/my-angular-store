@@ -1,10 +1,15 @@
+<p>products</p>
+
 <ng-container *ngIf="products$ | async as products">
   <ul class="products-list">
     <li
       *ngFor="let product of products; trackBy: trackProduct"
       class="product-list-item"
     >
-      <a [routerLink]="['./', product.id]">
+      <a
+        [routerLink]="['./', product.id]"
+        class="block border-b-2 border-solid border-main-color-500"
+      >
         <span class="product-photo-wrapper">
           <span
             class="product-photo"

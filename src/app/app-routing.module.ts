@@ -9,13 +9,6 @@ const routes: Routes = [
       import('./routes/products/products.module').then((m) => m.ProductsModule),
   },
   {
-    path: 'products/:id',
-    loadChildren: () =>
-      import('./routes/product-details/product-details.module').then(
-        (m) => m.ProductDetailsModule
-      ),
-  },
-  {
     path: 'cart',
     loadChildren: () =>
       import('./routes/cart/cart.module').then((m) => m.CartModule),

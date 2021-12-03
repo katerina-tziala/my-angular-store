@@ -10,7 +10,6 @@ import { ProductsService } from 'src/app/shared/services/products.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-
 export class ProductsComponent implements OnInit {
   public products$: Observable<Product[]>;
   private DUMMY: Product[] = [
@@ -75,10 +74,10 @@ export class ProductsComponent implements OnInit {
       },
     },
   ];
-  
+
   constructor(private productsService: ProductsService) {
     // this.products$ = of(this.DUMMY);
-
+    //
     this.products$ = this.productsService.gerProducts().pipe(
       take(1),
       catchError((err) => {
@@ -89,7 +88,6 @@ export class ProductsComponent implements OnInit {
     );
   }
   ngOnInit() {}
-
 
   public trackProduct(_: number, product: Product): number {
     return product.id;
