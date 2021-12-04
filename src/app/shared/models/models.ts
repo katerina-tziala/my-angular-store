@@ -12,3 +12,7 @@ export interface Product {
   price: number;
   rating: Rating;
 }
+
+export interface OrderItem extends Product {
+  quantity: number;
+}

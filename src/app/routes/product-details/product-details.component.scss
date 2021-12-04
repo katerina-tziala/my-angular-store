@@ -1,0 +1,33 @@
+@import "../../../assets/styles/product-styles.scss";
+
+.product-message-wrapper {
+  @apply flex flex-wrap justify-center items-center h-full w-full p-4;
+  position: relative;
+}
+
+.alert-container {
+  @apply bg-red-100 border border-red-400 text-red-700 font-semibold p-4 rounded relative;
+}
+
+.product-details-wrapper {
+  @apply p-6;
+  max-width: 1020px;
+  margin: auto;
+}
+
+.product-title {
+  @extend %product-title;
+}
+
+.product-proto-container {
+  @apply border-b border-solid border-main-color-500 mb-2;
+}
+
+.product-photo-wrapper {
+  @extend %product-photo-wrapper;
+  height: 200px;
+}
+
+.product-description {
+  @apply italic mt-2;
+}

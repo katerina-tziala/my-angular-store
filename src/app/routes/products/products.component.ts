@@ -78,7 +78,7 @@ export class ProductsComponent implements OnInit {
   constructor(private productsService: ProductsService) {
     // this.products$ = of(this.DUMMY);
     //
-    this.products$ = this.productsService.gerProducts().pipe(
+    this.products$ = this.productsService.getProducts().pipe(
       take(1),
       catchError((err) => {
         console.log(err);

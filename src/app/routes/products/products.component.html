@@ -1,3 +1,10 @@
-<ng-container *ngIf="products$ | async as products">
-  <app-products-list class="products-list" [products]="products"></app-products-list>
+<ng-container *ngIf="products$ | async as products; else loader">
+  <app-products-list
+    class="products-list"
+    [products]="products"
+  ></app-products-list>
 </ng-container>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

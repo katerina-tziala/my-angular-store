@@ -4,7 +4,7 @@
 }
 
 .header {
-  @apply bg-main-color-500 py-3 px-4 text-white text-2xl shadow-lg;
+  @apply flex justify-between items-center items-center bg-main-color-500 py-3 px-4 text-white text-2xl shadow-lg;
   z-index: 5;
 }
 

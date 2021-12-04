@@ -5,6 +5,7 @@ import { ProductRouterModule } from './product-routing.module';
 import { ProductRatingModule } from 'src/app/shared/presentational-components/product-rating/product-rating.module';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductListItemComponent } from './products-list/product-list-item/product-list-item.component';
+import { LoaderModule } from 'src/app/shared/presentational-components/loader/loader.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { ProductListItemComponent } from './products-list/product-list-item/prod
     ProductsListComponent,
     ProductListItemComponent,
   ],
-  imports: [CommonModule, ProductRouterModule, ProductRatingModule],
+  imports: [CommonModule, LoaderModule, ProductRouterModule, ProductRatingModule],
   exports: [],
 })
 export class ProductsModule {}

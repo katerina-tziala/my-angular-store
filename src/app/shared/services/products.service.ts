@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpParams,
-  HttpParamsOptions,
-} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/models';
 @Injectable({
@@ -11,11 +7,16 @@ import { Product } from '../models/models';
 })
 export class ProductsService {
   private API = 'https://fakestoreapi.com';
+  private productsEndpoint = `${this.API}/products`;
 
   constructor(private http: HttpClient) {}
 
-  public gerProducts(): Observable<Product[]> {
-    const url = `${this.API}/products`;
-    return this.http.get<Product[]>(url);
+  public getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsEndpoint);
+  }
+
+  public getProduct(id: number): Observable<Product> {
+    const url = `${this.productsEndpoint}/${id}`;
+    return this.http.get<Product>(url);
   }
 }
