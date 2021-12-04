@@ -1,28 +1,3 @@
-<p>products</p>
-
 <ng-container *ngIf="products$ | async as products">
-  <ul class="products-list">
-    <li
-      *ngFor="let product of products; trackBy: trackProduct"
-      class="product-list-item"
-    >
-      <a
-        [routerLink]="['./', product.id]"
-        class="block border-b-2 border-solid border-main-color-500"
-      >
-        <span class="product-photo-wrapper">
-          <span
-            class="product-photo"
-            [style.background-image]="'url(' + product.image + ')'"
-          ></span>
-        </span>
-      </a>
-      <p class="product-category">{{ product.category }}</p>
-      <p class="product-title">
-        <a [routerLink]="['./', product.id]">{{ product.title }}</a>
-      </p>
-      <app-product-rating [rating]="product.rating"></app-product-rating>
-      <p class="product-price">{{ product.price | currency: "EUR" }}</p>
-    </li>
-  </ul>
+  <app-products-list class="products-list" [products]="products"></app-products-list>
 </ng-container>

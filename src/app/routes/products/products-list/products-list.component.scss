@@ -1,0 +1,32 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.empty-products-list {
+  @apply flex flex-wrap justify-center items-center h-full w-full p-4;
+}
+
+.alert-container {
+  @apply bg-red-100 border border-red-400 text-red-700 font-semibold p-4 rounded relative;
+}
+
+.products-list {
+  @apply grid
+  gap-0
+  content-start
+  grid-cols-1
+  sm:grid-cols-2
+  md:grid-cols-3
+  lg:grid-cols-4
+  xl:grid-cols-5
+  2xl:grid-cols-6;
+  width: 100%;
+  height: 100%;
+}
+
+.product-list-item {
+  @apply bg-white text-black p-4;
+  display: block;
+}

@@ -5,6 +5,7 @@
 
 .header {
   @apply bg-main-color-500 py-3 px-4 text-white text-2xl shadow-lg;
+  z-index: 5;
 }
 
 .header-link {
@@ -22,5 +23,5 @@
 }
 
 .app-content {
-  @apply flex-grow overflow-y-auto p-2;
+  @apply flex-grow overflow-y-auto;
 }

@@ -86,10 +86,8 @@ export class ProductsComponent implements OnInit {
         return of([]);
       })
     );
+
+    // this.products$ = of([]);
   }
   ngOnInit() {}
-
-  public trackProduct(_: number, product: Product): number {
-    return product.id;
-  }
 }

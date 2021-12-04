@@ -1,0 +1,14 @@
+<ng-template #noProducts>
+  <div class="empty-products-list">
+    <p class="alert-container" role="alert">Products were not found!</p>
+  </div>
+</ng-template>
+
+<ul *ngIf="products.length; else noProducts" class="products-list">
+  <li
+    *ngFor="let product of products; trackBy: trackProduct"
+    class="product-list-item"
+  >
+    <app-product-list-item [product]="product"></app-product-list-item>
+  </li>
+</ul>
