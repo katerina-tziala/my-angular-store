@@ -21,3 +21,12 @@
     }
   }
 }
+
+.product-price {
+  @extend %product-price;
+  @apply mt-2;
+}
+
+.product-cart-button {
+  @apply mt-2 mb-6;
+}

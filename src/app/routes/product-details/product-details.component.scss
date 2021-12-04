@@ -31,3 +31,13 @@
 .product-description {
   @apply italic mt-2;
 }
+
+.price-button-wrapper {
+  @apply flex flex-wrap justify-start items-center h-full w-full my-2;
+}
+
+.product-price {
+  @extend %product-price;
+  @apply mb-3;
+  flex-grow: 1;
+}

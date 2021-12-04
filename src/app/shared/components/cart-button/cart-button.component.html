@@ -1,0 +1,10 @@
+<button
+  type="button"
+  class="cart-button"
+  [ngClass]="{ 'cart-button--enabled': !inCart }"
+  [disabled]="inCart"
+  (click)="addInCart()"
+>
+  <i class="fas fa-shopping-cart"></i>
+  <i class="fas" [ngClass]="{ 'fa-check': inCart, 'fa-plus': !inCart }"></i>
+</button>

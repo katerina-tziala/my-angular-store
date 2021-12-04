@@ -26,8 +26,8 @@
   background-size: contain;
 }
 
-.product-price {
-  @apply text-2xl font-semibold mt-2;
+%product-price {
+  @apply text-2xl font-semibold;
   &::first-letter {
     @apply text-base;
     vertical-align: text-top;

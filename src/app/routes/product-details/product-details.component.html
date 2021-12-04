@@ -18,7 +18,10 @@
     </div>
     <app-product-rating [rating]="product.rating"></app-product-rating>
     <p class="product-description">{{ product.description }}</p>
-    <p class="product-price">{{ product.price | currency: "EUR" }}</p>
+    <div class="price-button-wrapper">
+      <p class="product-price">{{ product.price | currency: "EUR" }}</p>
+      <app-cart-button [product]="product"></app-cart-button>
+    </div>
   </div>
 </ng-container>
 

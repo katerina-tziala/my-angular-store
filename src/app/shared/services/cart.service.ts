@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { OrderItem } from '../models/models';
+import { OrderItem, Product } from '../models/models';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +11,20 @@ export class CartService {
   >([]);
 
   constructor() {
-    console.log(this.orderItems);
+    // console.log(this.orderItems);
+  }
+
+  public productInCart(id: number): boolean {
+    const product = this.orderItems.value.find((product) => product.id === id);
+    return !!product;
+  }
+
+  public addProductInCart(product: Product): void {
+    if (this.productInCart(product.id)) {
+      return;
+    }
+    const items = [...this.orderItems.value];
+    items.push({ ...product, quantity: 1 });
+    this.orderItems.next(items);
   }
 }

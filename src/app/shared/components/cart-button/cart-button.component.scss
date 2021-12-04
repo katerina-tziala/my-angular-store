@@ -1,0 +1,30 @@
+:host {
+  display: inline-block;
+}
+
+.cart-button {
+  @apply inline-block rounded-md px-3 py-1 bg-green-400 text-white;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  > i {
+    display: inline-block;
+    &:last-of-type {
+      @apply ml-4;
+    }
+  }
+}
+
+.cart-button--enabled {
+  @apply bg-main-color-400 text-white shadow-md;
+  &:hover {
+    @apply bg-main-color-500;
+  }
+
+  &:active {
+    @apply bg-main-color-400;
+    box-shadow: none;
+  }
+}
