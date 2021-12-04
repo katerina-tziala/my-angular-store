@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, EMPTY, BehaviorSubject } from 'rxjs';
 import { catchError, map, take } from 'rxjs/operators';
@@ -12,9 +12,7 @@ import { ProductsService } from 'src/app/shared/services/products.service';
 })
 export class ProductDetailsComponent {
   public product$: Observable<Product>;
-  public loading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
-    true
-  );
+  public loading = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,11 +22,11 @@ export class ProductDetailsComponent {
     this.product$ = this.productsService.getProduct(id).pipe(
       take(1),
       map((result) => {
-        this.loading$.next(false);
+        this.loading = false;
         return result;
       }),
       catchError((_) => {
-        this.loading$.next(false);
+        this.loading = false;
         return EMPTY;
       })
     );

@@ -1,4 +1,4 @@
-<ng-container *ngIf="loading$ | async">
+<ng-container *ngIf="loading">
   <div class="product-message-wrapper">
     <app-loader></app-loader>
   </div>
@@ -23,7 +23,7 @@
 </ng-container>
 
 <ng-template #noProduct>
-  <div class="product-message-wrapper">
+  <div *ngIf="!loading" class="product-message-wrapper">
     <p class="alert-container" role="alert">Product was not found!</p>
   </div>
 </ng-template>
