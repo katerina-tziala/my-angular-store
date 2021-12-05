@@ -17,14 +17,8 @@ export class CartIndicatorComponent {
       .getOrderItems$()
       .pipe(
         map((orderItems: OrderItem[]) =>
-          this.getNumberOfProductsInOrder(orderItems)
+          this.cartService.getNumberOfItemsInOrder(orderItems)
         )
       );
-  }
-
-  private getNumberOfProductsInOrder(orderItems: OrderItem[]): number {
-    return orderItems.reduce((total: number, orderItem: OrderItem) => {
-      return total + orderItem.quantity;
-    }, 0);
   }
 }

@@ -1,3 +1,228 @@
+<div *ngIf="orderSummary$ | async as orderSummary" class="cart-summary">
+  <div>
+    <div class="order-items">
+      <p class="order-items-title">Items:</p>
+      <p class="order-items-number">
+        {{ orderSummary.numberOfItems }}
+      </p>
+    </div>
+    <div>
+      <p class="order-total-title">Total:</p>
+      <p class="order-total-amount">
+        {{ orderSummary.total | currency: "EUR" }}
+      </p>
+    </div>
+  </div>
+</div>
+<div>cart works!</div>
 <p>
-  cart works!
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+  nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim
+  ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
+  vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula,
+  facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus
+  interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+  ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
+  turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
+  congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+  purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+  egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl
+  est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+  augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+  odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc
+  sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed
+  nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
+  gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus
+  pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem
+  ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla
+  et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum dolor
+  sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+  interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis
+  dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+  luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare
+  eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit
+  risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+  In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui
+  eget tellus gravida venenatis. Integer fringilla congue eros non fermentum.
+  Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
+  velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+  imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+  scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum
+  dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
+  dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
+  venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+  massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis
+  sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+  hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+  dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.
+  Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+  non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
+  Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing
+  elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+  vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+  congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+  Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent
+  convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+  dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+  venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+  venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+  nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
 </p>
