@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { OrderItem, Product } from '../models/models';
 
 @Injectable({
@@ -12,6 +12,10 @@ export class CartService {
 
   constructor() {
     // console.log(this.orderItems);
+  }
+
+  public getOrderItems$(): Observable<OrderItem[]> {
+    return this.orderItems.asObservable();
   }
 
   public productInCart(id: number): boolean {

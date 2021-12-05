@@ -4,12 +4,12 @@
 }
 
 .header {
-  @apply flex justify-between items-center items-center bg-main-color-500 py-3 px-4 text-white text-2xl shadow-lg;
+  @apply flex justify-between items-center items-center bg-main-color-500 py-3.5 px-5 text-white shadow-lg;
   z-index: 5;
 }
 
 .header-link {
-  @apply flex justify-start items-center;
+  @apply flex justify-start items-center  text-3xl;
 
   &:hover {
     > .header-title {
@@ -19,7 +19,7 @@
 }
 
 .header-title {
-  @apply inline-block px-2;
+  @apply inline-block px-3;
 }
 
 .app-content {
