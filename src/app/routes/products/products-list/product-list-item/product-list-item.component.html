@@ -1,14 +1,9 @@
-<a [routerLink]="['./', product.id]" class="product-photo-link">
-  <span class="product-photo-wrapper">
-    <span
-      class="product-photo"
-      [style.background-image]="'url(' + product.image + ')'"
-    ></span>
-  </span>
+<a [routerLink]="['/products', product.id]" class="product-photo-link">
+  <app-product-photo [url]="product.image"></app-product-photo>
 </a>
 <p class="product-category">{{ product.category }}</p>
 <p class="product-title">
-  <a [routerLink]="['./', product.id]">{{ product.title }}</a>
+  <a [routerLink]="['/products', product.id]">{{ product.title }}</a>
 </p>
 <app-product-rating [rating]="product.rating"></app-product-rating>
 <p class="product-price">{{ product.price | currency: "EUR" }}</p>

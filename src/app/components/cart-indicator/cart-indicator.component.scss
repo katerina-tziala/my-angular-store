@@ -21,9 +21,9 @@
 }
 
 .number-of-items {
-  @apply text-xs font-semibold bg-white text-gray-800 px-1 rounded-full shadow-md;
+  @apply text-xs font-semibold bg-white text-black px-1 rounded-full shadow-md;
   position: absolute;
-  top: -0.55rem;
+  top: -0.5rem;
   display: inline-block;
   margin: auto;
   z-index: 3;

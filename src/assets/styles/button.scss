@@ -1,0 +1,38 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+%button {
+  @apply inline-block
+  font-normal
+  rounded-md
+  px-3
+  py-1
+  uppercase;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      @apply shadow-md;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+%button-main {
+  @extend %button;
+  @apply bg-main-color-400 text-white;
+
+  &:not(:disabled) {
+    &:hover {
+      @apply bg-main-color-500;
+    }
+  }
+}

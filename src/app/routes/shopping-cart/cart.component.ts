@@ -12,9 +12,12 @@ import { CartService } from 'src/app/shared/services/cart.service';
 })
 export class CartComponent implements OnInit {
   public orderSummary$: Observable<OrderSummary>;
+  public orderItems$: Observable<OrderItem[]>;
 
   constructor(private cartService: CartService, private router: Router) {
     // this.router.navigate(['/your-path'])
+    this.orderItems$ = this.cartService.getOrderItems$();
+
     this.orderSummary$ = this.cartService
       .getOrderItems$()
       .pipe(
@@ -22,9 +25,22 @@ export class CartComponent implements OnInit {
           this.cartService.getOrderSummary(orderItems)
         )
       );
+
+    // .pipe(
+    //   map((orderItems: OrderItem[]) => orderItems)
+    // );
   }
 
   ngOnInit() {
     // redirectTo
+  }
+
+  public emptyCart(): void {
+    console.log('emptyCart');
+    this.cartService.emptyCart();
+  }
+
+  public getOrderTotal(orderItem: OrderItem[]): number {
+    return this.cartService.getOrderTotal(orderItem);
   }
 }

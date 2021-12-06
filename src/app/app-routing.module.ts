@@ -9,9 +9,9 @@ const routes: Routes = [
       import('./routes/products/products.module').then((m) => m.ProductsModule),
   },
   {
-    path: 'cart',
+    path: 'shoppingcart',
     loadChildren: () =>
-      import('./routes/cart/cart.module').then((m) => m.CartModule),
+      import('./routes/shopping-cart/shopping-cart.module').then((m) => m.ShoppingCartModule),
   },
   { path: '**', redirectTo: 'products' }, // redirect to
 ];

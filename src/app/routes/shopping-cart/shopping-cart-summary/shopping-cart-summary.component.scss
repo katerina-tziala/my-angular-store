@@ -1,0 +1,17 @@
+@import "../../../../assets/styles/product-styles.scss";
+:host {
+  @apply flex flex-wrap justify-start content-center items-center px-4 py-3 sticky top-0 bg-white border-b border-solid border-main-color-500;
+}
+
+.summary-total {
+  @apply flex-grow text-2xl pr-4;
+}
+
+.summary-total-title {
+  @apply inline-block font-semibold mr-2;
+}
+
+.summary-total-amount {
+  @extend %product-price;
+  @apply inline-block;
+}

@@ -86,4 +86,8 @@ export class CartService {
     const total = this.getOrderTotal(orderItems);
     return { numberOfItems, total };
   }
+
+  public emptyCart(): void {
+    this.orderItems.next([]);
+  }
 }

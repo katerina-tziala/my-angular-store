@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.product-category {
+%product-category {
   @apply capitalize
         inline-block
         text-xs
@@ -12,22 +12,12 @@
         rounded-full
         py-0.5
         px-2.5
-        bg-main-color-500
-        mt-2;
-}
-
-.product-photo {
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+        bg-main-color-500;
+  width: fit-content;
 }
 
 %product-price {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-medium;
   &::first-letter {
     @apply text-base;
     vertical-align: text-top;
@@ -36,15 +26,19 @@
 }
 
 %product-title {
-  @apply font-semibold mt-0.5 mb-2;
+  @apply font-semibold;
   width: 100%;
-  height: 40px;
-  line-height: 20px;
+  height: 46px;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  > a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 %product-photo-wrapper {
