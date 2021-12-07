@@ -1,5 +1,7 @@
 <ng-template #cartEmpty>
-  <p>emptyCart</p>
+  <div class="empty-cart-wrapper">
+    <p class="alert-container" role="alert">Shopping cart is empty!</p>
+  </div>
 </ng-template>
 
 <ng-container *ngIf="orderItems$ | async as orderItems">
@@ -12,25 +14,13 @@
         <a [routerLink]="['checkout']" class="cart-button">checkout</a>
       </div>
     </app-shopping-cart-summary>
-
-    <div
-      *ngFor="let item of orderItems"
-      class="p-4 flex flex-wrap justify-center content-center items-start"
-    >
-      <a [routerLink]="['/products', item.id]" class="item-photo-link">
-        <app-product-photo
-          class="order-item-photo"
-          [url]="item.image"
-        ></app-product-photo>
-      </a>
-      <div class="flex-grow flex flex-col justify-start">
-        <p class="order-item-category">{{ item.category }}</p>
-        <p class="order-item-title">
-          <a [routerLink]="['/products', item.id]">{{ item.title }}</a>
-        </p>
-
-        <app-product-rating [rating]="item.rating"></app-product-rating>
-      </div>
-    </div>
+    <ul>
+      <li
+        *ngFor="let item of orderItems"
+        class="flex flex-wrap justify-center content-center items-start"
+      >
+        <app-order-item [item]="item"></app-order-item>
+      </li>
+    </ul>
   </ng-container>
 </ng-container>

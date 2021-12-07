@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/button.scss";
+@import "../../../../assets/styles/product-styles.scss";
+:host {
+  @apply w-full flex flex-wrap justify-center content-center items-start;
+}
+
+.order-item-photo {
+  border: 1px solid red;
+  width: 100px;
+}
+
+.order-item-info {
+  @apply flex-grow flex flex-col justify-start;
+  max-width: 600px;
+  border: 1px solid red;
+  > .order-item-category {
+    @extend %product-category;
+  }
+  > .order-item-title {
+    @extend %product-title;
+  }
+}
+
+.order-item-delete-button {
+  @extend %button-main;
+}

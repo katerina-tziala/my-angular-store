@@ -1,0 +1,29 @@
+<a [routerLink]="['/products', item.id]" class="item-photo-link">
+  <app-product-photo
+    class="order-item-photo"
+    [url]="item.image"
+  ></app-product-photo>
+</a>
+
+<div class="order-item-info">
+  <p class="order-item-category">{{ item.category }}</p>
+  <p class="order-item-title">
+    <a [routerLink]="['/products', item.id]">{{ item.title }}</a>
+  </p>
+  <app-product-rating [rating]="item.rating"></app-product-rating>
+</div>
+
+<div>
+  <div class="flex justify-center content-center items-center">
+    <p class="product-price">{{ item.price | currency: "EUR" }}</p>
+    x
+    <div>{{ item.quantity }}</div>
+  </div>
+  <button
+    type="button"
+    class="order-item-delete-button"
+    (click)="removeFromCart()"
+  >
+    <i class="fas fa-trash-alt"></i>
+  </button>
+</div>

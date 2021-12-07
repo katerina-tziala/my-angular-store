@@ -11,24 +11,12 @@ import { CartService } from 'src/app/shared/services/cart.service';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-  public orderSummary$: Observable<OrderSummary>;
+  // public orderSummary$: Observable<OrderSummary>;
   public orderItems$: Observable<OrderItem[]>;
 
   constructor(private cartService: CartService, private router: Router) {
     // this.router.navigate(['/your-path'])
     this.orderItems$ = this.cartService.getOrderItems$();
-
-    this.orderSummary$ = this.cartService
-      .getOrderItems$()
-      .pipe(
-        map((orderItems: OrderItem[]) =>
-          this.cartService.getOrderSummary(orderItems)
-        )
-      );
-
-    // .pipe(
-    //   map((orderItems: OrderItem[]) => orderItems)
-    // );
   }
 
   ngOnInit() {
@@ -36,11 +24,10 @@ export class CartComponent implements OnInit {
   }
 
   public emptyCart(): void {
-    console.log('emptyCart');
     this.cartService.emptyCart();
   }
 
-  public getOrderTotal(orderItem: OrderItem[]): number {
-    return this.cartService.getOrderTotal(orderItem);
+  public removeFromCart(id: number): void {
+    this.cartService.removeFromCart(id);
   }
 }

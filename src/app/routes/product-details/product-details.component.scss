@@ -24,12 +24,10 @@
 }
 
 .product-proto-container {
-  @apply border-b border-solid border-main-color-500 mb-2;
-}
-
-.product-photo-wrapper {
-  @extend %product-photo-wrapper;
-  height: 200px;
+  @apply border-b border-solid border-main-color-500 p-3;
+  > .product-photo {
+    height: 200px;
+  }
 }
 
 .product-description {
