@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { OrderItem, OrderSummary, Product } from '../models/models';
+import { OrderItem, OrderSummary, Product } from '../../models/models';
 
 @Injectable({
   providedIn: 'root',
@@ -52,7 +52,7 @@ export class CartService {
       rating: { rate: 2.2, count: 140 },
       title:
         'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ',
-    }
+    },
   ];
   private orderItems: BehaviorSubject<OrderItem[]> = new BehaviorSubject<
     OrderItem[]
@@ -105,6 +105,20 @@ export class CartService {
 
   public removeFromCart(id: number): void {
     const items = [...this.orderItems.value].filter((item) => item.id !== id);
+    this.orderItems.next(items);
+  }
+
+  private removeFromListItems(id: number): OrderItem[] {
+    return [...this.orderItems.value].filter((item) => item.id !== id);
+  }
+
+  public updateItem(updatedItem: OrderItem): void {
+    const items = [...this.orderItems.value].map((item) => {
+      if (item.id === updatedItem.id) {
+        return { ...updatedItem };
+      }
+      return item;
+    });
     this.orderItems.next(items);
   }
 }

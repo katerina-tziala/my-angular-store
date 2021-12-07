@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { OrderItem, OrderSummary } from 'src/app/shared/models/models';
+import { OrderItem, OrderSummary } from 'src/app/models/models';
 import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({

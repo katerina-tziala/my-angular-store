@@ -5,9 +5,10 @@ import { CartComponent } from './cart.component';
 import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
 import { ProductInfoModule } from 'src/app/shared/product-info/product-info.module';
 import { OrderItemComponent } from './order-item/order-item.component';
+import { NumberInputModule } from 'src/app/components/number-input/number-input.module';
 
 @NgModule({
   declarations: [CartComponent, ShoppingCartSummaryComponent, OrderItemComponent],
-  imports: [CommonModule, ShoppingCartRouterModule, ProductInfoModule],
+  imports: [CommonModule, ShoppingCartRouterModule, ProductInfoModule, NumberInputModule],
 })
 export class ShoppingCartModule {}

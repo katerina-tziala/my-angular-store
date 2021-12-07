@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { OrderItem } from 'src/app/shared/models/models';
+import { OrderItem } from 'src/app/models/models';
 import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
@@ -15,5 +15,12 @@ export class OrderItemComponent implements OnInit {
   ngOnInit() {}
   public removeFromCart(): void {
     this.cartService.removeFromCart(this.item.id);
+  }
+
+  public onQuantityUpdate(quantity: number | undefined): void {
+    if (quantity) {
+      const updatedItem = { ...this.item, quantity };
+      this.cartService.updateItem(updatedItem);
+    }
   }
 }

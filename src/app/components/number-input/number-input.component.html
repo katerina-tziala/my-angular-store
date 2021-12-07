@@ -1,0 +1,23 @@
+<button
+  type="button"
+  class="fas fa-minus number-input-button number-input-button-left"
+  (click)="decreaseValue()"
+  [disabled]="decreaseDisabled"
+></button>
+<input
+  class="number-input"
+  type="number"
+  min="minValue"
+  max="maxValue"
+  integer
+  [minValue]="minValue"
+  [maxValue]="maxValue"
+  [(ngModel)]="value"
+  (keyup)="submitUpdatedValue()"
+/>
+<button
+  type="button"
+  class="fas fa-plus number-input-button number-input-button-right"
+  (click)="increaseValue()"
+  [disabled]="increaseDisabled"
+></button>

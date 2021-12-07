@@ -17,13 +17,26 @@
   <div class="flex justify-center content-center items-center">
     <p class="product-price">{{ item.price | currency: "EUR" }}</p>
     x
-    <div>{{ item.quantity }}</div>
+    <!-- <div>{{ item.quantity }}</div> -->
+    <!-- [minValue]="0"
+    [maxValue]="5" -->
+    <!-- [value]="item.quantity"  -->
+    <app-number-input
+      class="number-input"
+      [minValue]="1"
+      [value]="item.quantity"
+      [maxValue]="20"
+      (onChange)="onQuantityUpdate($event)"
+    ></app-number-input>
   </div>
+
   <button
     type="button"
     class="order-item-delete-button"
     (click)="removeFromCart()"
   >
-    <i class="fas fa-trash-alt"></i>
+    <i class="fas fa-shopping-basket"></i>
+    <!-- <i class="fas fa-trash-alt"></i> -->
+    <i class="fas fa-times"></i>
   </button>
 </div>

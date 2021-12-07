@@ -1,0 +1,57 @@
+@import "../../../assets/styles/button.scss";
+
+:host {
+  @apply flex flex-nowrap justify-start content-center items-center;
+  position: relative;
+  height: 32px;
+
+  &:focus-within, &:hover, &:focus {
+    .number-input{
+      @extend %focused-input;
+    }
+  }
+}
+
+%focused-input {
+  outline: none;
+  outline-offset: 0;
+  @apply bg-main-color-500 bg-opacity-10;
+}
+
+.number-input {
+  @apply m-0 py-0 px-3 box-border inline-block flex-grow h-full
+  border border-r-0 border-l-0
+  border-solid border-main-color-400 bg-white text-center;
+  min-width: 32px;
+  &:hover, &:focus {
+    @extend %focused-input;
+  }
+}
+
+.number-input::-webkit-clear-button,
+.number-input::-ms-clear {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+}
+
+.number-input-button {
+  @extend %button-main;
+  @apply m-0 p-0 h-full;
+  width: auto;
+  aspect-ratio: 1/1;
+  font-family: "Font Awesome 5 Free";
+}
+
+.number-input-button-left {
+  @apply rounded-r-none;
+}
+
+.number-input-button-right {
+  @apply rounded-l-none;
+}

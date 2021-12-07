@@ -4,14 +4,12 @@
 
 %button {
   @apply inline-block
-  font-normal
   rounded-md
   px-3
-  py-1
-  uppercase;
+  py-1 text-center;
 
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.7;
     cursor: not-allowed;
   }
 

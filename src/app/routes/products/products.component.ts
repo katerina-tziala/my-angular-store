@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { take, catchError } from 'rxjs/operators';
-import { Product } from 'src/app/shared/models/models';
+import { Product } from 'src/app/models/models';
 import { ProductsService } from 'src/app/shared/services/products.service';
 
 @Component({
