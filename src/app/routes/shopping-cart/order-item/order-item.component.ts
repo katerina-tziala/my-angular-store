@@ -23,4 +23,8 @@ export class OrderItemComponent implements OnInit {
       this.cartService.updateItem(updatedItem);
     }
   }
+
+  public get totalAmount(): number {
+    return this.cartService.getItemTotal(this.item);
+  }
 }

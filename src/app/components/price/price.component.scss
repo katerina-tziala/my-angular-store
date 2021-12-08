@@ -1,0 +1,12 @@
+:host {
+  display: inline-block;
+}
+
+.price-text {
+  @apply inline-block text-2xl font-medium;
+  &::first-letter {
+    @apply text-base;
+    vertical-align: text-top;
+    letter-spacing: 4px;
+  }
+}

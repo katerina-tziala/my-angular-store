@@ -6,9 +6,10 @@ import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-c
 import { ProductInfoModule } from 'src/app/shared/product-info/product-info.module';
 import { OrderItemComponent } from './order-item/order-item.component';
 import { NumberInputModule } from 'src/app/components/number-input/number-input.module';
+import { PriceModule } from 'src/app/components/price/price.module';
 
 @NgModule({
   declarations: [CartComponent, ShoppingCartSummaryComponent, OrderItemComponent],
-  imports: [CommonModule, ShoppingCartRouterModule, ProductInfoModule, NumberInputModule],
+  imports: [CommonModule, ShoppingCartRouterModule, PriceModule, ProductInfoModule, NumberInputModule],
 })
 export class ShoppingCartModule {}

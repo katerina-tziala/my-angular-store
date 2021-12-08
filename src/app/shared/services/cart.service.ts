@@ -48,7 +48,7 @@ export class CartService {
       id: 14,
       image: 'https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg',
       price: 999.99,
-      quantity: 10,
+      quantity: 20,
       rating: { rate: 2.2, count: 140 },
       title:
         'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ',
@@ -89,8 +89,12 @@ export class CartService {
 
   public getOrderTotal(orderItems: OrderItem[]): number {
     return orderItems.reduce((total: number, orderItem: OrderItem) => {
-      return total + orderItem.quantity * orderItem.price;
+      return total + this.getItemTotal(orderItem);
     }, 0);
+  }
+
+  public getItemTotal(orderItem: OrderItem): number {
+    return orderItem.quantity * orderItem.price;
   }
 
   public getOrderSummary(orderItems: OrderItem[]): OrderSummary {
@@ -106,10 +110,6 @@ export class CartService {
   public removeFromCart(id: number): void {
     const items = [...this.orderItems.value].filter((item) => item.id !== id);
     this.orderItems.next(items);
-  }
-
-  private removeFromListItems(id: number): OrderItem[] {
-    return [...this.orderItems.value].filter((item) => item.id !== id);
   }
 
   public updateItem(updatedItem: OrderItem): void {

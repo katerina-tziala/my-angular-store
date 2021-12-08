@@ -7,7 +7,7 @@
   rounded-md
   px-3
   py-1 text-center;
-
+  width: fit-content;
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;

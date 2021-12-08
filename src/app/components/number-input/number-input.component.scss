@@ -17,9 +17,8 @@
   outline-offset: 0;
   @apply bg-main-color-500 bg-opacity-10;
 }
-
 .number-input {
-  @apply m-0 py-0 px-3 box-border inline-block flex-grow h-full
+  @apply m-0 py-0 px-3 box-border inline-block flex-grow h-full text-lg font-medium
   border border-r-0 border-l-0
   border-solid border-main-color-400 bg-white text-center;
   min-width: 32px;
@@ -42,7 +41,7 @@
 
 .number-input-button {
   @extend %button-main;
-  @apply m-0 p-0 h-full;
+  @apply m-0 p-0 h-full text-base;
   width: auto;
   aspect-ratio: 1/1;
   font-family: "Font Awesome 5 Free";

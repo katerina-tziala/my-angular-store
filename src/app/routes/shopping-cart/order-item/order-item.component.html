@@ -15,7 +15,8 @@
 
 <div>
   <div class="flex justify-center content-center items-center">
-    <p class="product-price">{{ item.price | currency: "EUR" }}</p>
+    <!-- <p class="product-price">{{ item.price | currency: "EUR" }}</p> -->
+    <app-price [price]="item.price"></app-price>
     x
     <!-- <div>{{ item.quantity }}</div> -->
     <!-- [minValue]="0"
@@ -28,15 +29,15 @@
       [maxValue]="20"
       (onChange)="onQuantityUpdate($event)"
     ></app-number-input>
+    <app-price class="item-total" [price]="totalAmount"></app-price>
+    <button
+      type="button"
+      class="order-item-delete-button"
+      (click)="removeFromCart()"
+    >
+      <i class="fas fa-shopping-basket"></i>
+      <!-- <i class="fas fa-trash-alt"></i> -->
+      <i class="fas fa-times"></i>
+    </button>
   </div>
-
-  <button
-    type="button"
-    class="order-item-delete-button"
-    (click)="removeFromCart()"
-  >
-    <i class="fas fa-shopping-basket"></i>
-    <!-- <i class="fas fa-trash-alt"></i> -->
-    <i class="fas fa-times"></i>
-  </button>
 </div>
