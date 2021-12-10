@@ -1,13 +1,16 @@
 :host {
-  @apply flex flex-col h-full w-full bg-white;
+  @apply flex flex-col h-full w-full bg-white font-sans;
   position: relative;
+  // bg-white 
+  // background-color: #f2f2f2;
 }
 
 
 
 .header {
-  @apply flex justify-between content-center items-center bg-main-color-500 py-3.5 px-4 text-white shadow-lg;
+  @apply flex justify-between content-center items-center bg-main-color-500 py-3.5 px-4 text-white shadow-md;
   z-index: 5;
+  height: 64px;
 }
 
 .header-link {

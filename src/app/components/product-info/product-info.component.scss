@@ -1,0 +1,10 @@
+@import "../../../assets/styles/product-styles.scss";
+
+.product-category {
+  @extend %product-category;
+}
+
+.product-title {
+  @extend %product-title;
+  @apply mb-2;
+}

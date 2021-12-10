@@ -34,3 +34,13 @@
     }
   }
 }
+
+%icons-button {
+  @extend %button;
+  > i {
+    display: inline-block;
+    &:last-of-type {
+      @apply ml-4;
+    }
+  }
+}

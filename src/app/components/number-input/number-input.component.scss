@@ -1,7 +1,7 @@
 @import "../../../assets/styles/button.scss";
 
 :host {
-  @apply flex flex-nowrap justify-start content-center items-center;
+  @apply flex flex-nowrap justify-start content-center items-center bg-white;
   position: relative;
   height: 32px;
 

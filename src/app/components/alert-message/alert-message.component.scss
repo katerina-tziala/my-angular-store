@@ -1,0 +1,8 @@
+:host {
+  @apply flex flex-wrap justify-center items-center h-full w-full p-4;
+  position: relative;
+}
+
+.alert-message {
+  @apply bg-red-100 border border-red-400 text-red-700 font-semibold p-4 rounded relative animate-bounce;
+}

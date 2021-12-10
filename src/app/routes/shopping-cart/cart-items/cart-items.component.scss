@@ -1,0 +1,17 @@
+:host {
+  position: relative;
+  width: 100%;
+}
+
+.cart-items-list {
+  @apply w-full relative p-2;
+}
+
+.cart-item {
+  @apply border-b border-gray-400 bg-white px-3 py-4;
+  max-width: 1020px;
+  margin: auto;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

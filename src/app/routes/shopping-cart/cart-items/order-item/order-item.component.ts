@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { OrderItem } from 'src/app/models/models';
 import { CartService } from 'src/app/shared/services/cart.service';
 
@@ -7,22 +7,10 @@ import { CartService } from 'src/app/shared/services/cart.service';
   templateUrl: './order-item.component.html',
   styleUrls: ['./order-item.component.scss'],
 })
-export class OrderItemComponent implements OnInit {
+export class OrderItemComponent {
   @Input() public item!: OrderItem;
 
   constructor(private cartService: CartService) {}
-
-  ngOnInit() {}
-  public removeFromCart(): void {
-    this.cartService.removeFromCart(this.item.id);
-  }
-
-  public onQuantityUpdate(quantity: number | undefined): void {
-    if (quantity) {
-      const updatedItem = { ...this.item, quantity };
-      this.cartService.updateItem(updatedItem);
-    }
-  }
 
   public get totalAmount(): number {
     return this.cartService.getItemTotal(this.item);

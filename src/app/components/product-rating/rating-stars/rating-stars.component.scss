@@ -1,0 +1,20 @@
+:host {
+  @apply text-gray-300;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+}
+.rating-stars-container {
+  @apply flex justify-between items-center;
+  width: 100px;
+  > i {
+    display: inline-block;
+  }
+}
+
+.rating-percentage {
+  @apply absolute bottom-0 left-0 text-yellow-300;
+  display: inline-block;
+  overflow: hidden;
+}

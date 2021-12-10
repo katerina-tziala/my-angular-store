@@ -1,0 +1,24 @@
+<a [routerLink]="['/products', item.id]" class="order-item-photo-link">
+  <app-product-photo
+    class="order-item-photo"
+    [url]="item.image"
+  ></app-product-photo>
+</a>
+<!-- <div class="order-item-product-info">
+  <p class="order-item-category">{{ item.category }}</p>
+  <p class="order-item-title">
+    <a [routerLink]="['/products', item.id]">{{ item.title }}</a>
+  </p>
+  <app-product-rating [rating]="item.rating"></app-product-rating>
+</div> -->
+<app-product-info class="order-item-product-info" [product]="item"></app-product-info>
+<div class="order-item-info">
+  <div class="order-item-price-info">
+    <app-price class="order-item-price" [price]="item.price"></app-price>
+    <app-price [price]="totalAmount"></app-price>
+  </div>
+  <app-order-item-actions
+    class="order-item-actions"
+    [item]="item"
+  ></app-order-item-actions>
+</div>

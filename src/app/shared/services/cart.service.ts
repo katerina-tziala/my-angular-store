@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { OrderItem, OrderSummary, Product } from '../../models/models';
+import { OrderItem, Product } from '../../models/models';
 
 @Injectable({
   providedIn: 'root',
@@ -62,6 +62,11 @@ export class CartService {
     // console.log(this.orderItems);
   }
 
+  public get itemsInCart(): boolean {
+    const items = [...this.orderItems.value];
+    return !!items.length;
+  }
+
   public getOrderItems$(): Observable<OrderItem[]> {
     return this.orderItems.asObservable();
   }
@@ -95,12 +100,6 @@ export class CartService {
 
   public getItemTotal(orderItem: OrderItem): number {
     return orderItem.quantity * orderItem.price;
-  }
-
-  public getOrderSummary(orderItems: OrderItem[]): OrderSummary {
-    const numberOfItems = this.getNumberOfItemsInOrder(orderItems);
-    const total = this.getOrderTotal(orderItems);
-    return { numberOfItems, total };
   }
 
   public emptyCart(): void {

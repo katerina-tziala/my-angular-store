@@ -1,0 +1,5 @@
+<p class="product-category">{{ product.category }}</p>
+<p class="product-title">
+  <a [routerLink]="['/products', product.id]">{{ product.title }}</a>
+</p>
+<app-product-rating [rating]="product.rating"></app-product-rating>

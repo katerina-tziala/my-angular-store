@@ -16,8 +16,3 @@ export interface Product {
 export interface OrderItem extends Product {
   quantity: number;
 }
-
-export interface OrderSummary {
-  numberOfItems: number;
-  total: number;
-}

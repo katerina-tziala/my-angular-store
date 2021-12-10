@@ -1,0 +1,15 @@
+<app-number-input
+  class="item-quantity"
+  [minValue]="1"
+  [value]="item.quantity"
+  [maxValue]="20"
+  (onChange)="onQuantityUpdate($event)"
+></app-number-input>
+<button
+  type="button"
+  class="order-item-delete-button"
+  (click)="removeFromCart()"
+>
+  <i class="fas fa-shopping-basket"></i>
+  <i class="fas fa-times"></i>
+</button>

@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { OrderItem, OrderSummary } from 'src/app/models/models';
+import { OrderItem } from 'src/app/models/models';
 import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
@@ -10,17 +8,11 @@ import { CartService } from 'src/app/shared/services/cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
-export class CartComponent implements OnInit {
-  // public orderSummary$: Observable<OrderSummary>;
+export class CartComponent {
   public orderItems$: Observable<OrderItem[]>;
 
-  constructor(private cartService: CartService, private router: Router) {
-    // this.router.navigate(['/your-path'])
+  constructor(private cartService: CartService) {
     this.orderItems$ = this.cartService.getOrderItems$();
-  }
-
-  ngOnInit() {
-    // redirectTo
   }
 
   public emptyCart(): void {

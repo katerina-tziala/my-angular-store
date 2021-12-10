@@ -1,26 +1,15 @@
-<ng-template #cartEmpty>
-  <div class="empty-cart-wrapper">
-    <p class="alert-container" role="alert">Shopping cart is empty!</p>
-  </div>
+<ng-template #loader>
+  <app-loader></app-loader>
 </ng-template>
 
-<ng-container *ngIf="orderItems$ | async as orderItems">
-  <ng-container *ngIf="orderItems.length > 0; else cartEmpty">
-    <app-shopping-cart-summary>
-      <div class="summary-actions">
-        <button type="button" class="cart-button" (click)="emptyCart()">
-          empty cart
-        </button>
-        <a [routerLink]="['checkout']" class="cart-button">checkout</a>
-      </div>
-    </app-shopping-cart-summary>
-    <ul>
-      <li
-        *ngFor="let item of orderItems"
-        class="flex flex-wrap justify-center content-center items-start"
-      >
-        <app-order-item [item]="item"></app-order-item>
-      </li>
-    </ul>
-  </ng-container>
+<ng-container *ngIf="orderItems$ | async as orderItems; else loader">
+  <app-shopping-cart-summary *ngIf="orderItems.length > 0">
+    <div class="summary-actions">
+      <button type="button" class="cart-button" (click)="emptyCart()">
+        empty cart
+      </button>
+      <a [routerLink]="['checkout']" class="cart-button">checkout</a>
+    </div>
+  </app-shopping-cart-summary>
+  <app-cart-items [cartItems]="orderItems"></app-cart-items>
 </ng-container>

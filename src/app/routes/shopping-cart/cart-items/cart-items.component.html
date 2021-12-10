@@ -1,0 +1,11 @@
+<ng-template #cartEmpty>
+  <app-alert-message
+    [message]="'Your shopping cart is empty!'"
+  ></app-alert-message>
+</ng-template>
+
+<ul class="cart-items-list" *ngIf="cartItems.length > 0; else cartEmpty">
+  <li *ngFor="let item of cartItems" class="cart-item">
+    <app-order-item [item]="item"></app-order-item>
+  </li>
+</ul>
