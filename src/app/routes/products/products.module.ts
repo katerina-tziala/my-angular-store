@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products.component';
 import { ProductRouterModule } from './product-routing.module';
 import { ProductsListModule } from './products-list/products-list.module';
-import { LoaderModule } from 'src/app/components/loader/loader.module';
+import { LoaderModule } from 'src/app/shared/components/loader/loader.module';
 
 @NgModule({
   declarations: [

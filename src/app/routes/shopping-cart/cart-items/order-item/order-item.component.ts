@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { OrderItem } from 'src/app/models/models';
-import { CartService } from 'src/app/services/cart.service';
+import { OrderItem } from 'src/app/shared/models/models';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-order-item',

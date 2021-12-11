@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Order } from 'src/app/models/models';
+import { Order } from 'src/app/shared/models/models';
 
 @Component({
   selector: 'app-order-confirmation',

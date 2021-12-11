@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { OrderItem } from 'src/app/models/models';
-import { CartService } from 'src/app/services/cart.service';
+import { OrderItem } from 'src/app/shared/models/models';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-cart-indicator',

@@ -10,7 +10,7 @@ import {
   isValidNumber,
   getValueCheckedOnMaxBound,
   getValueCheckedOnMinBound,
-} from '../../utilities/numbers';
+} from '../../../utilities/numbers';
 
 @Component({
   selector: 'app-number-input',

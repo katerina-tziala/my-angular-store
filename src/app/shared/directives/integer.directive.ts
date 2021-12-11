@@ -1,6 +1,6 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 import { NgControl } from '@angular/forms';
-import { getNumberInBoundaries } from '../utilities/numbers';
+import { getNumberInBoundaries } from '../../utilities/numbers';
 
 @Directive({
   selector: '[integer]',

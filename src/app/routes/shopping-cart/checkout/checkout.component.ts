@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Customer, Order } from 'src/app/models/models';
-import { CartService } from 'src/app/services/cart.service';
+import { Customer, Order } from 'src/app/shared/models/models';
+import { CartService } from 'src/app/shared/services/cart.service';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',

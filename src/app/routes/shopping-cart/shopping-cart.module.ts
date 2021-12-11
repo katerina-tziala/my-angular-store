@@ -4,7 +4,7 @@ import { ShoppingCartRouterModule } from './shopping-cart-routing.module';
 import { CartComponent } from './cart.component';
 import { CartItemsModule } from './cart-items/cart-items.module';
 import { ShoppingCartSummaryModule } from './shopping-cart-summary/shopping-cart-summary.module';
-import { LoaderModule } from 'src/app/components/loader/loader.module';
+import { LoaderModule } from 'src/app/shared/components/loader/loader.module';
 
 @NgModule({
   declarations: [CartComponent],

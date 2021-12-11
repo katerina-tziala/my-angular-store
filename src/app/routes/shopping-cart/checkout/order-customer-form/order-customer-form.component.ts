@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
-import { Customer } from 'src/app/models/models';
+import { Customer } from 'src/app/shared/models/models';
 
 @Component({
   selector: 'app-order-customer-form',

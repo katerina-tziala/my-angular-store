@@ -2,8 +2,8 @@ import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, EMPTY, BehaviorSubject } from 'rxjs';
 import { catchError, map, take } from 'rxjs/operators';
-import { Product } from 'src/app/models/models';
-import { ProductsService } from 'src/app/services/products.service';
+import { Product } from 'src/app/shared/models/models';
+import { ProductsService } from 'src/app/shared/services/products.service';
 
 @Component({
   selector: 'app-product-details',

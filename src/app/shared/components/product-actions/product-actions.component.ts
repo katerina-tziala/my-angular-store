@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { OrderItem, Product } from 'src/app/models/models';
-import { CartService } from 'src/app/services/cart.service';
+import { OrderItem, Product } from 'src/app/shared/models/models';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-product-actions',

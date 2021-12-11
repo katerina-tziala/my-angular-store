@@ -1,5 +1,5 @@
-@import "../../../assets/styles/button.scss";
-@import "../../../assets/styles/input.scss";
+@import "styles/button.scss";
+@import "styles/input.scss";
 
 :host {
   @apply flex flex-nowrap justify-start content-center items-center bg-white;
