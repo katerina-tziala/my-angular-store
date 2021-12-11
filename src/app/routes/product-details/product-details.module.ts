@@ -21,6 +21,6 @@ import { ProductActionsModule } from 'src/app/shared/components/product-actions/
     PriceModule,
     ProductActionsModule
   ],
-  exports: [],
+  exports: []
 })
 export class ProductDetailsModule {}

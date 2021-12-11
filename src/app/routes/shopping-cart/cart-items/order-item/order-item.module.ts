@@ -17,6 +17,6 @@ import { ProductInfoModule } from 'src/app/shared/components/product-info/produc
     ProductInfoModule
   ],
   declarations: [OrderItemComponent],
-  exports: [OrderItemComponent],
+  exports: [OrderItemComponent]
 })
 export class OrderItemModule {}

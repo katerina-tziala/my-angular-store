@@ -7,6 +7,6 @@ import { AlertMessageModule } from 'src/app/shared/components/alert-message/aler
 @NgModule({
   imports: [CommonModule, AlertMessageModule, OrderItemModule],
   declarations: [CartItemsComponent],
-  exports: [CartItemsComponent],
+  exports: [CartItemsComponent]
 })
 export class CartItemsModule {}

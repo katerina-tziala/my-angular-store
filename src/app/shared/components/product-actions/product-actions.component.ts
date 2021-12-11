@@ -7,7 +7,7 @@ import { CartService } from 'src/app/shared/services/cart.service';
 @Component({
   selector: 'app-product-actions',
   templateUrl: './product-actions.component.html',
-  styleUrls: ['./product-actions.component.scss'],
+  styleUrls: ['./product-actions.component.scss']
 })
 export class ProductActionsComponent {
   @Input() public product!: Product;
@@ -19,7 +19,7 @@ export class ProductActionsComponent {
       .getOrderItems$()
       .pipe(
         map((items: OrderItem[]) =>
-          items.find((item) => item.id === this.product.id)
+          items.find(item => item.id === this.product.id)
         )
       );
   }

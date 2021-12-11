@@ -7,11 +7,11 @@ const routes: Routes = [
   {
     path: 'checkout',
     loadChildren: () =>
-      import('./checkout/checkout.module').then((m) => m.CheckoutModule),
-  },
+      import('./checkout/checkout.module').then(m => m.CheckoutModule)
+  }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class ShoppingCartRouterModule {}

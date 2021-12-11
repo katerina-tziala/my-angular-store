@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { OrderItem, Product } from '../models/models';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CartService {
   private orderItems: BehaviorSubject<OrderItem[]> = new BehaviorSubject<
@@ -24,7 +24,7 @@ export class CartService {
   }
 
   public productInCart(id: number): boolean {
-    const product = this.orderItems.value.find((product) => product.id === id);
+    const product = this.orderItems.value.find(product => product.id === id);
     return !!product;
   }
 
@@ -61,12 +61,12 @@ export class CartService {
     if (!this.productInCart(id)) {
       return;
     }
-    const items = [...this.orderItems.value].filter((item) => item.id !== id);
+    const items = [...this.orderItems.value].filter(item => item.id !== id);
     this.orderItems.next(items);
   }
 
   public updateItem(updatedItem: OrderItem): void {
-    const items = [...this.orderItems.value].map((item) => {
+    const items = [...this.orderItems.value].map(item => {
       if (item.id === updatedItem.id) {
         return { ...updatedItem };
       }

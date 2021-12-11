@@ -5,7 +5,7 @@ import { Customer } from 'src/app/shared/models/models';
 @Component({
   selector: 'app-order-customer-form',
   templateUrl: './order-customer-form.component.html',
-  styleUrls: ['./order-customer-form.component.scss'],
+  styleUrls: ['./order-customer-form.component.scss']
 })
 export class OrderCustomerFormComponent {
   @Output() public onSubmit = new EventEmitter<Customer>();
@@ -13,27 +13,27 @@ export class OrderCustomerFormComponent {
   public form = this.fb.group({
     firstName: new FormControl(null, [
       Validators.required,
-      Validators.minLength(3),
+      Validators.minLength(3)
     ]),
     lastName: new FormControl(null, [
       Validators.required,
-      Validators.minLength(3),
+      Validators.minLength(3)
     ]),
     email: new FormControl(null, [Validators.required, Validators.email]),
     phone: new FormControl(null, [
       Validators.required,
       Validators.minLength(6),
-      Validators.maxLength(14),
+      Validators.maxLength(14)
     ]),
     address: new FormControl(null, [
       Validators.required,
-      Validators.minLength(5),
+      Validators.minLength(5)
     ]),
     zip: new FormControl(null, [
       Validators.required,
       Validators.minLength(5),
-      Validators.maxLength(10),
-    ]),
+      Validators.maxLength(10)
+    ])
   });
 
   constructor(private fb: FormBuilder) {}

@@ -11,9 +11,8 @@ describe('ShoppingCartSummaryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShoppingCartSummaryComponent ]
-    })
-    .compileComponents();
+      declarations: [ShoppingCartSummaryComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -14,6 +14,6 @@ import { OrderConfirmationModule } from './order-confirmation/order-confirmation
     ShoppingCartSummaryModule,
     OrderCustomerFormModule,
     OrderConfirmationModule
-  ],
+  ]
 })
 export class CheckoutModule {}

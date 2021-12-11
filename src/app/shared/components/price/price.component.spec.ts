@@ -11,9 +11,8 @@ describe('PriceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PriceComponent ]
-    })
-    .compileComponents();
+      declarations: [PriceComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

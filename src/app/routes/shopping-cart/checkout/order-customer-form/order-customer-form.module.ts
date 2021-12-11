@@ -6,6 +6,6 @@ import { OrderCustomerFormComponent } from './order-customer-form.component';
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   declarations: [OrderCustomerFormComponent],
-  exports: [OrderCustomerFormComponent],
+  exports: [OrderCustomerFormComponent]
 })
 export class OrderCustomerFormModule {}

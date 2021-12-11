@@ -4,11 +4,8 @@ import { ProductActionsComponent } from './product-actions.component';
 import { OrderItemActionsModule } from '../order-item-actions/order-item-actions.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    OrderItemActionsModule
-  ],
+  imports: [CommonModule, OrderItemActionsModule],
   declarations: [ProductActionsComponent],
   exports: [ProductActionsComponent]
 })
-export class ProductActionsModule { }
+export class ProductActionsModule {}

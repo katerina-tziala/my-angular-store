@@ -4,11 +4,8 @@ import { ShoppingCartSummaryComponent } from './shopping-cart-summary.component'
 import { PriceModule } from 'src/app/shared/components/price/price.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    PriceModule
-  ],
+  imports: [CommonModule, PriceModule],
   declarations: [ShoppingCartSummaryComponent],
   exports: [ShoppingCartSummaryComponent]
 })
-export class ShoppingCartSummaryModule { }
+export class ShoppingCartSummaryModule {}

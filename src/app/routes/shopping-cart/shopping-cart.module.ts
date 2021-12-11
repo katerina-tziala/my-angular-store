@@ -13,7 +13,7 @@ import { LoaderModule } from 'src/app/shared/components/loader/loader.module';
     ShoppingCartRouterModule,
     LoaderModule,
     ShoppingCartSummaryModule,
-    CartItemsModule,
-  ],
+    CartItemsModule
+  ]
 })
 export class ShoppingCartModule {}

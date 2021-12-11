@@ -7,7 +7,7 @@ import { CartService } from 'src/app/shared/services/cart.service';
 @Component({
   selector: 'app-cart-indicator',
   templateUrl: './cart-indicator.component.html',
-  styleUrls: ['./cart-indicator.component.scss'],
+  styleUrls: ['./cart-indicator.component.scss']
 })
 export class CartIndicatorComponent {
   public numberOfItems$: Observable<number>;

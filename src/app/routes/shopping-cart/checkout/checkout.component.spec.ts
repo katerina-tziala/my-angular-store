@@ -11,9 +11,8 @@ describe('ShoppingCartCheckoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CheckoutComponent ]
-    })
-    .compileComponents();
+      declarations: [CheckoutComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

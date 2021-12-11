@@ -5,6 +5,6 @@ import { OrderConfirmationComponent } from './order-confirmation.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [OrderConfirmationComponent],
-  exports: [OrderConfirmationComponent],
+  exports: [OrderConfirmationComponent]
 })
 export class OrderConfirmationModule {}

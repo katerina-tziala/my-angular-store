@@ -5,6 +5,6 @@ import { PriceComponent } from './price.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [PriceComponent],
-  exports: [PriceComponent],
+  exports: [PriceComponent]
 })
 export class PriceModule {}

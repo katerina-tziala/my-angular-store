@@ -3,7 +3,7 @@ import { NgControl } from '@angular/forms';
 import { getNumberInBoundaries } from '../../utilities/numbers';
 
 @Directive({
-  selector: '[integer]',
+  selector: '[integer]'
 })
 export class IntegerDirective {
   @Input() minValue: number | undefined;
@@ -12,7 +12,11 @@ export class IntegerDirective {
   constructor(private inputField: ElementRef, public model: NgControl) {}
 
   @HostListener('input', ['$event']) onEvent() {
-    const positiveInteger = getNumberInBoundaries(this.positiveInteger, this.minValue, this.maxValue);
+    const positiveInteger = getNumberInBoundaries(
+      this.positiveInteger,
+      this.minValue,
+      this.maxValue
+    );
     this.model?.control?.setValue(positiveInteger);
     this.model?.valueAccessor?.writeValue(positiveInteger);
   }
@@ -21,5 +25,4 @@ export class IntegerDirective {
     const integer = parseInt(this.inputField.nativeElement.value.toString());
     return isNaN(integer) ? undefined : integer;
   }
-
 }

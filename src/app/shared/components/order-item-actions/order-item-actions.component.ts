@@ -5,7 +5,7 @@ import { CartService } from 'src/app/shared/services/cart.service';
 @Component({
   selector: 'app-order-item-actions',
   templateUrl: './order-item-actions.component.html',
-  styleUrls: ['./order-item-actions.component.scss'],
+  styleUrls: ['./order-item-actions.component.scss']
 })
 export class OrderItemActionsComponent {
   @Input() public item!: OrderItem;

@@ -17,6 +17,6 @@ import { ProductActionsModule } from 'src/app/shared/components/product-actions/
     ProductActionsModule
   ],
   declarations: [ProductListItemComponent],
-  exports: [ProductListItemComponent],
+  exports: [ProductListItemComponent]
 })
 export class ProductListItemModule {}

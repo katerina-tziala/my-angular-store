@@ -6,6 +6,6 @@ import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [ProductRatingComponent, RatingStarsComponent],
-  exports: [ProductRatingComponent],
+  exports: [ProductRatingComponent]
 })
 export class ProductRatingModule {}

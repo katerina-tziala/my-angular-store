@@ -9,6 +9,6 @@ import { CartIndicatorComponent } from './shared/components/cart-indicator/cart-
   declarations: [AppComponent, CartIndicatorComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

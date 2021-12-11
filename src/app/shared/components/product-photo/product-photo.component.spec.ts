@@ -11,9 +11,8 @@ describe('ProductPhotoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductPhotoComponent ]
-    })
-    .compileComponents();
+      declarations: [ProductPhotoComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

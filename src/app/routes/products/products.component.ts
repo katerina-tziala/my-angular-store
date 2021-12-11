@@ -7,7 +7,7 @@ import { ProductsService } from 'src/app/shared/services/products.service';
 @Component({
   selector: 'app-product',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss'],
+  styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
   public products$: Observable<Product[]>;
@@ -15,7 +15,7 @@ export class ProductsComponent {
   constructor(private productsService: ProductsService) {
     this.products$ = this.productsService.getProducts().pipe(
       take(1),
-      catchError((_) => of([]))
+      catchError(_ => of([]))
     );
   }
 }

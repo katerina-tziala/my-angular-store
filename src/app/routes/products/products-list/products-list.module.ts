@@ -7,6 +7,6 @@ import { ProductListItemModule } from './product-list-item/product-list-item.mod
 @NgModule({
   imports: [CommonModule, AlertMessageModule, ProductListItemModule],
   declarations: [ProductsListComponent],
-  exports: [ProductsListComponent],
+  exports: [ProductsListComponent]
 })
 export class ProductsListModule {}

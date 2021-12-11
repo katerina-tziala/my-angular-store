@@ -5,11 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { IntegerDirective } from 'src/app/shared/directives/integer.directive';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
+  imports: [CommonModule, FormsModule],
   declarations: [NumberInputComponent, IntegerDirective],
   exports: [NumberInputComponent]
 })
-export class NumberInputModule { }
+export class NumberInputModule {}

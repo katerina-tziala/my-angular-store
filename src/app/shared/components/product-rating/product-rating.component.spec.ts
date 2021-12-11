@@ -11,9 +11,8 @@ describe('ProductRatingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductRatingComponent ]
-    })
-    .compileComponents();
+      declarations: [ProductRatingComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

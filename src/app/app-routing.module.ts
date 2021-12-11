@@ -6,27 +6,27 @@ const routes: Routes = [
   {
     path: 'products',
     loadChildren: () =>
-      import('./routes/products/products.module').then((m) => m.ProductsModule),
+      import('./routes/products/products.module').then(m => m.ProductsModule)
   },
   {
     path: 'products/:id',
     loadChildren: () =>
       import('./routes/product-details/product-details.module').then(
-        (m) => m.ProductDetailsModule
-      ),
+        m => m.ProductDetailsModule
+      )
   },
   {
     path: 'shoppingcart',
     loadChildren: () =>
       import('./routes/shopping-cart/shopping-cart.module').then(
-        (m) => m.ShoppingCartModule
-      ),
+        m => m.ShoppingCartModule
+      )
   },
-  { path: '**', redirectTo: 'products' }, // redirect to
+  { path: '**', redirectTo: 'products' } // redirect to
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

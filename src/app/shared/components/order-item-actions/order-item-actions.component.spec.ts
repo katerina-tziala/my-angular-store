@@ -11,7 +11,7 @@ describe('CartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OrderItemActionsComponent],
+      declarations: [OrderItemActionsComponent]
     }).compileComponents();
   }));
 

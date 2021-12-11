@@ -29,10 +29,10 @@ export function getValueCheckedOnMaxBound(
 }
 
 export function belowMin(value: number | undefined, min: number): boolean {
-  return !isValidNumber(value) || value as number < min;
+  return !isValidNumber(value) || (value as number) < min;
 }
 export function aboveMax(value: number | undefined, maxValue: number): boolean {
-  return !isValidNumber(value) || value as number > maxValue;
+  return !isValidNumber(value) || (value as number) > maxValue;
 }
 
 export function isValidNumber(

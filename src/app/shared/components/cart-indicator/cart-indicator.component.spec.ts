@@ -11,9 +11,8 @@ describe('CartIndicatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CartIndicatorComponent ]
-    })
-    .compileComponents();
+      declarations: [CartIndicatorComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
