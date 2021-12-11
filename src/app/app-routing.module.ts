@@ -9,9 +9,25 @@ const routes: Routes = [
       import('./routes/products/products.module').then((m) => m.ProductsModule),
   },
   {
+    path: 'products/:id',
+    loadChildren: () =>
+      import('./routes/product-details/product-details.module').then(
+        (m) => m.ProductDetailsModule
+      ),
+  },
+  {
     path: 'shoppingcart',
     loadChildren: () =>
-      import('./routes/shopping-cart/shopping-cart.module').then((m) => m.ShoppingCartModule),
+      import('./routes/shopping-cart/shopping-cart.module').then(
+        (m) => m.ShoppingCartModule
+      ),
+  },
+  {
+    path: 'order-confirmation/:id',
+    loadChildren: () =>
+      import('./routes/order-confirmation/order-confirmation.module').then(
+        (m) => m.OrderConfirmationModule
+      ),
   },
   { path: '**', redirectTo: 'products' }, // redirect to
 ];
