@@ -27,7 +27,7 @@
   @apply sm:col-span-2;
 
   > .order-item-price-info {
-    @apply flex justify-end content-center items-center mb-2;
+    @apply flex justify-end content-center items-center mr-4;
 
     > .order-item-price {
       transform: scale(0.75);

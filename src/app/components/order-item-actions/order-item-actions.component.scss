@@ -1,17 +1,18 @@
 @import "../../../assets/styles/button.scss";
 
 :host {
-  @apply w-full flex flex-wrap justify-between content-center items-center;
+  @apply w-full flex flex-wrap justify-center content-center items-center;
 }
 
 .item-quantity {
   width: 120px;
+  @apply m-2;
 }
 
 .order-item-delete-button {
   @extend %icons-button;
 
-  @apply bg-yellow-600 text-white ml-6;
+  @apply bg-yellow-600 text-white m-2;
   &:not(:disabled) {
     &:hover {
       @apply bg-yellow-500;
