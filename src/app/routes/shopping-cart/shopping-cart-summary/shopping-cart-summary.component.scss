@@ -14,8 +14,3 @@
 .summary-total-title {
   @apply inline-block font-semibold mr-2;
 }
-
-.summary-total-amount {
-  @extend %product-price;
-  @apply inline-block;
-}

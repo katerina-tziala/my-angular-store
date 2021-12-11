@@ -1,0 +1,10 @@
+<ng-template #addButton>
+  <button type="button" class="cart-add-button" (click)="addInCart()">
+    <i class="fas fa-shopping-basket"></i>
+    <i class="fas fa-check"></i>
+  </button>
+</ng-template>
+
+<ng-container *ngIf="productInOrder$ | async as productInOrder; else addButton">
+  <app-order-item-actions class="order-item-actions" [item]="productInOrder"></app-order-item-actions>
+</ng-container>

@@ -1,27 +1,7 @@
-@import "../../../../../assets/styles/product-styles.scss";
-
-.product-list-item {
-  @apply bg-white text-black p-4;
-  display: block;
-}
-
 .product-photo-link {
-  @apply block border-b border-solid border-main-color-500 p-2;
-}
-
-.product-category {
-  @extend %product-category;
-}
-
-.product-title {
-  @extend %product-title;
+  @apply block p-2;
 }
 
 .product-price {
-  @extend %product-price;
-  @apply mt-2;
-}
-
-.product-cart-button {
-  @apply mt-2 mb-6;
+  @apply m-2;
 }

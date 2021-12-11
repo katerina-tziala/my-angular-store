@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable, EMPTY, BehaviorSubject } from 'rxjs';
 import { catchError, map, take } from 'rxjs/operators';
 import { Product } from 'src/app/models/models';
-import { ProductsService } from 'src/app/shared/services/products.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-product-details',

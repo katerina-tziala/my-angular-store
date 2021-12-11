@@ -5,7 +5,7 @@
 </ng-template>
 
 <ul class="cart-items-list" *ngIf="cartItems.length > 0; else cartEmpty">
-  <li *ngFor="let item of cartItems" class="cart-item">
+  <li *ngFor="let item of cartItems; trackBy: trackItem" class="cart-item">
     <app-order-item [item]="item"></app-order-item>
   </li>
 </ul>

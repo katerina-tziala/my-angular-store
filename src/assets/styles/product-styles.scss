@@ -16,15 +16,6 @@
   width: fit-content;
 }
 
-%product-price {
-  @apply text-2xl font-medium;
-  &::first-letter {
-    @apply text-base;
-    vertical-align: text-top;
-    letter-spacing: 4px;
-  }
-}
-
 %product-title {
   @apply font-semibold pr-2;
   width: 100%;
@@ -41,18 +32,3 @@
   }
 }
 
-%product-photo-wrapper {
-  @apply flex justify-center items-center content-center m-2 bg-white text-main-color-500;
-  width: 100%;
-  height: 100px;
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 900;
-    content: "\f02b";
-    @apply text-3xl;
-  }
-}

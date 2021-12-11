@@ -1,7 +1,5 @@
 <ng-template #noProducts>
-  <div class="empty-products-list">
-    <p class="alert-container" role="alert">Products were not found!</p>
-  </div>
+  <app-alert-message [message]="'Products were not found!'"></app-alert-message>
 </ng-template>
 
 <ul *ngIf="products.length; else noProducts" class="products-list">

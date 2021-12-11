@@ -1,27 +1,25 @@
 <ng-container *ngIf="loading">
-  <div class="product-message-wrapper">
-    <app-loader></app-loader>
-  </div>
-</ng-container>
-
-<ng-container *ngIf="product$ | async as product; else noProduct">
-  <div class="product-details-wrapper">
-    <p class="product-category">{{ product.category }}</p>
-    <h2 class="product-title">{{ product.title }}</h2>
-    <div class="product-proto-container">
-      <app-product-photo class="product-photo" [url]="product.image"></app-product-photo>
-    </div>
-    <app-product-rating [rating]="product.rating"></app-product-rating>
-    <p class="product-description">{{ product.description }}</p>
-    <div class="price-button-wrapper">
-      <p class="product-price">{{ product.price | currency: "EUR" }}</p>
-      <app-cart-button [product]="product"></app-cart-button>
-    </div>
-  </div>
+  <app-loader></app-loader>
 </ng-container>
 
 <ng-template #noProduct>
-  <div *ngIf="!loading" class="product-message-wrapper">
-    <p class="alert-container" role="alert">Product was not found!</p>
-  </div>
+  <ng-container *ngIf="!loading">
+    <app-alert-message [message]="'Product was not found!'"></app-alert-message>
+  </ng-container>
 </ng-template>
+
+<div
+  class="product-details-wrapper"
+  *ngIf="product$ | async as product; else noProduct"
+>
+  <p class="product-category">{{ product.category }}</p>
+  <h2 class="product-title">{{ product.title }}</h2>
+  <app-product-photo
+    class="product-photo"
+    [url]="product.image"
+  ></app-product-photo>
+  <app-product-rating [rating]="product.rating"></app-product-rating>
+  <p class="product-description">{{ product.description }}</p>
+  <app-price [price]="product.price"></app-price>
+  <app-product-actions [product]="product"></app-product-actions>
+</div>

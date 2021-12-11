@@ -8,4 +8,8 @@ import { OrderItem } from 'src/app/models/models';
 })
 export class CartItemsComponent {
   @Input() cartItems: OrderItem[] = [];
+
+  public trackItem(_: number, item: OrderItem): number {
+    return item.id;
+  }
 }

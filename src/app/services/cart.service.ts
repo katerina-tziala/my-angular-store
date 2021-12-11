@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { OrderItem, Product } from '../../models/models';
+import { OrderItem, Product } from '../models/models';
 
 @Injectable({
   providedIn: 'root',
@@ -58,10 +58,6 @@ export class CartService {
     OrderItem[]
   >(this.DUMMY);
 
-  constructor() {
-    // console.log(this.orderItems);
-  }
-
   public get itemsInCart(): boolean {
     const items = [...this.orderItems.value];
     return !!items.length;
@@ -83,7 +79,6 @@ export class CartService {
     const items = [...this.orderItems.value];
     items.push({ ...product, quantity: 1 });
     this.orderItems.next(items);
-    console.log(this.orderItems.value);
   }
 
   public getNumberOfItemsInOrder(orderItems: OrderItem[]): number {
@@ -107,6 +102,9 @@ export class CartService {
   }
 
   public removeFromCart(id: number): void {
+    if (!this.productInCart(id)) {
+      return;
+    }
     const items = [...this.orderItems.value].filter((item) => item.id !== id);
     this.orderItems.next(items);
   }
