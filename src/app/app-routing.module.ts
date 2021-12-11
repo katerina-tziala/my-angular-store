@@ -22,13 +22,6 @@ const routes: Routes = [
         (m) => m.ShoppingCartModule
       ),
   },
-  {
-    path: 'order-confirmation/:id',
-    loadChildren: () =>
-      import('./routes/order-confirmation/order-confirmation.module').then(
-        (m) => m.OrderConfirmationModule
-      ),
-  },
   { path: '**', redirectTo: 'products' }, // redirect to
 ];
 

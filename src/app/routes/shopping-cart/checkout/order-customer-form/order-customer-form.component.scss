@@ -1,0 +1,53 @@
+@import "../../../../../assets/styles/button.scss";
+@import "../../../../../assets/styles/input.scss";
+
+:host {
+  @apply block w-full relative;
+}
+
+.customer-order-form {
+  @apply flex flex-col justify-start content-start items-center w-full;
+}
+
+.form-header {
+  @apply text-center text-lg pb-4 pt-6;
+}
+
+.input-container {
+  @apply block w-full;
+  padding-bottom: 20px;
+  &.input-container-error {
+    padding-bottom: 0;
+
+    > .form-input {
+      @extend %invalid-input;
+    }
+  }
+}
+
+.form-input {
+  @extend %input;
+  @apply box-border block rounded-md border-2 border-solid
+  border-main-color-400 bg-white;
+  height: 36px;
+  min-width: 220px;
+  width: 100%;
+  &:hover,
+  &:focus {
+    @extend %focused-input;
+  }
+}
+
+.input-label-text {
+  @apply text-gray-500 italic capitalize pl-2;
+}
+
+.input-error-message {
+  @apply text-red-700 text-sm block w-full;
+  height: 20px;
+}
+
+.form-button {
+  @extend %button-main;
+  @apply uppercase m-3;
+}

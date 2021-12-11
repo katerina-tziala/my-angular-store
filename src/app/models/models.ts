@@ -16,3 +16,19 @@ export interface Product {
 export interface OrderItem extends Product {
   quantity: number;
 }
+
+export interface Customer {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  address: string;
+  zip: string;
+}
+
+export interface Order {
+  createdAt: Date;
+  number: number;
+  customer: Customer;
+  items: OrderItem[];
+}

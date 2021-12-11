@@ -1,0 +1,69 @@
+<form [formGroup]="form" class="customer-order-form" (ngSubmit)="submit()">
+  <h2 class="form-header">Fill in your information to proceed with the order</h2>
+  <label
+    class="input-container"
+    [ngClass]="{ 'input-container-error': invalidField('firstName') }"
+  >
+    <span class="input-label-text">first name*</span>
+    <input class="form-input" type="text" formControlName="firstName" />
+    <span *ngIf="invalidField('firstName')" class="input-error-message">
+      Enter a valid first name!
+    </span>
+  </label>
+
+  <label
+    class="input-container"
+    [ngClass]="{ 'input-container-error': invalidField('lastName') }"
+  >
+    <span class="input-label-text">last name*</span>
+    <input class="form-input" type="text" formControlName="lastName" />
+    <span *ngIf="invalidField('lastName')" class="input-error-message">
+      Enter a valid last name!
+    </span>
+  </label>
+
+  <label
+    class="input-container"
+    [ngClass]="{ 'input-container-error': invalidField('email') }"
+  >
+    <span class="input-label-text">email address*</span>
+    <input class="form-input" type="text" formControlName="email" />
+    <span *ngIf="invalidField('email')" class="input-error-message">
+      Enter a valid email address!
+    </span>
+  </label>
+
+  <label
+    class="input-container"
+    [ngClass]="{ 'input-container-error': invalidField('phone') }"
+  >
+    <span class="input-label-text">phone*</span>
+    <input class="form-input" type="text" formControlName="phone" />
+    <span *ngIf="invalidField('phone')" class="input-error-message">
+      Enter a valid phone!
+    </span>
+  </label>
+
+  <label
+    class="input-container"
+    [ngClass]="{ 'input-container-error': invalidField('address') }"
+  >
+    <span class="input-label-text">delivery address*</span>
+    <input class="form-input" type="text" formControlName="address" />
+    <span *ngIf="invalidField('address')" class="input-error-message">
+      Enter a valid delivery address!
+    </span>
+  </label>
+
+  <label
+    class="input-container"
+    [ngClass]="{ 'input-container-error': invalidField('zip') }"
+  >
+    <span class="input-label-text">postcode*</span>
+    <input class="form-input" type="text" formControlName="zip" />
+    <span *ngIf="invalidField('zip')" class="input-error-message">
+      Enter a valid postcode!
+    </span>
+  </label>
+  <button type="submit" class="form-button" [disabled]="!form.valid">order</button>
+</form>
