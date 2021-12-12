@@ -7,7 +7,7 @@ export const PRODUCTS: Product[] = [
     price: 109.95,
     description:
       'Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday',
-    category: "men's clothing",
+    category: 'clothing',
     image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
     rating: {
       rate: 3.9,
@@ -19,7 +19,7 @@ export const PRODUCTS: Product[] = [
     title: 'Mens Casual Premium Slim Fit T-Shirts ',
     price: 22.3,
     description: ' - ',
-    category: "men's clothing",
+    category: 'clothing',
     image:
       'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
     rating: {
@@ -31,8 +31,9 @@ export const PRODUCTS: Product[] = [
     id: 3,
     title: 'Mens Cotton Jacket',
     price: 55.99,
-    description: 'great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions.',
-    category: "men's clothing",
+    description:
+      'great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions.',
+    category: 'clothing',
     image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
     rating: {
       rate: 4.7,
