@@ -3,7 +3,7 @@ import { NgControl } from '@angular/forms';
 import { getNumberInBoundaries } from '../../utilities/numbers';
 
 @Directive({
-  selector: '[integer]'
+  selector: '[appInteger]'
 })
 export class IntegerDirective {
   @Input() minValue: number | undefined;

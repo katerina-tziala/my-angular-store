@@ -16,7 +16,7 @@ export class NumberInputComponent implements OnInit {
   @Input() public value: number | undefined;
   @Input() public minValue: number | undefined;
   @Input() public maxValue: number | undefined;
-  @Output() public onChange = new EventEmitter<number | undefined>();
+  @Output() public valueChange = new EventEmitter<number | undefined>();
 
   public ngOnInit() {
     const newValue = getNumberInBoundaries(
@@ -61,7 +61,7 @@ export class NumberInputComponent implements OnInit {
   }
 
   public submitUpdatedValue(): void {
-    this.onChange.emit(this.value);
+    this.valueChange.emit(this.value);
   }
 
   public increaseValue(): void {

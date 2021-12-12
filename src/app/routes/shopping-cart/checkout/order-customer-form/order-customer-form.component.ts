@@ -8,7 +8,7 @@ import { Customer } from 'src/app/shared/models/models';
   styleUrls: ['./order-customer-form.component.scss']
 })
 export class OrderCustomerFormComponent {
-  @Output() public onSubmit = new EventEmitter<Customer>();
+  @Output() public formSubmission = new EventEmitter<Customer>();
 
   public form = this.fb.group({
     firstName: new FormControl(null, [
@@ -43,7 +43,7 @@ export class OrderCustomerFormComponent {
     return field && field.errors && field.touched ? true : false;
   }
 
-  public submit(): void {
-    this.onSubmit.emit(this.form.value);
+  public onSubmit(): void {
+    this.formSubmission.emit(this.form.value);
   }
 }
