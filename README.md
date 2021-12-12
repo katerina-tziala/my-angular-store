@@ -2,7 +2,7 @@
 A Single Page Application that reflects the same user experience as that of a real-world e-commerce website utilizing the [fakestoreapi](https://fakestoreapi.com/).
 
 <p align="center">
-    <img src="https://github.com/katerina-tziala/my-angular-store/blob/master/docs/my-store-overview.png" alt="my store overview" width="80%" height="auto">
+    <img src="https://github.com/katerina-tziala/my-angular-store/blob/master/docs/app-overview.png" alt="my store overview" width="80%" height="auto">
 </p>
 
 ## Features
