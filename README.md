@@ -1,4 +1,4 @@
-# <img src="https://github.com/katerina-tziala/my-angular-store/blob/master/docs/logo.png" alt="app logo" width="44" height="44" align="left">My Angular Store
+# <img src="https://github.com/katerina-tziala/my-angular-store/blob/master/docs/logo.png" alt="app logo" width="44" height="44" align="left">My Store
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
