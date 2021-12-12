@@ -1,6 +1,10 @@
 # <img src="https://github.com/katerina-tziala/my-angular-store/blob/master/docs/logo.png" alt="app logo" width="44" height="44" align="left">My Store
 A Single Page Application that reflects the same user experience as that of a real-world e-commerce website utilizing the [fakestoreapi](https://fakestoreapi.com/).
 
+<p align="center">
+    <img src="https://github.com/katerina-tziala/my-angular-store/blob/master/docs/my-store-overview.png" alt="my store overview" width="80%" height="auto">
+</p>
+
 ## Features
 
 - Products Page: It displays the available products for the user to choose and add to their cart (in various quantities)
@@ -83,8 +87,5 @@ To run the app that is ready for production run: ``` npm start ```
 - Implementation of data caching (IndexDB) in order to return results for products faster.
 - Improve Unit Test Coverage by implementing more tests.
 - Implementation of End to End Testing.
-
-
-
-
-
+- Add Git Hooks to enforce and ensure the selected coding conventions and the quality of the app (tests)
+- Set up CI/CD
