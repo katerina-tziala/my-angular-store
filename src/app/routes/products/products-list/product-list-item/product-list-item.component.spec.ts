@@ -86,7 +86,7 @@ describe('ProductListItemComponent', () => {
     const product = PRODUCTS[0];
     fixture.detectChanges();
     const link = fixture.debugElement.query(By.css('.product-photo-link'));
- 
+
     expect(link)
       .withContext('Could not find the title link element')
       .toBeTruthy();
