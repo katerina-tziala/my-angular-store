@@ -7,5 +7,5 @@ import { OrderItem, Product } from 'src/app/shared/models/models';
   styleUrls: ['./product-info.component.scss']
 })
 export class ProductInfoComponent {
-  @Input() public product!: OrderItem | Product;
+  @Input() public product: OrderItem | Product | undefined;
 }

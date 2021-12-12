@@ -1,11 +1,12 @@
-<ng-template #ratingStars
-  ><div class="rating-stars-container">
+<ng-template #ratingStars>
+  <div class="rating-stars-container">
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
     <i class="fa fa-star"></i>
-    <i class="fa fa-star"></i></div
-></ng-template>
+    <i class="fa fa-star"></i>
+  </div>
+</ng-template>
 
 <ng-container *ngTemplateOutlet="ratingStars"></ng-container>
 <div class="rating-percentage" [style.width.%]="ratingPercentage">

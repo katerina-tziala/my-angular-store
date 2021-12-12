@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { ProductsListComponent } from './products-list.component';
 import { AlertMessageModule } from 'src/app/shared/components/alert-message/alert-message.module';
-import { ProductListItemComponent } from './product-list-item/product-list-item.component';
-import { ProductListItemModule } from './product-list-item/product-list-item.module';
 import { AlertMessageComponent } from 'src/app/shared/components/alert-message/alert-message.component';
 import { CommonModule } from '@angular/common';
-import { PRODUCTS } from 'src/test-utilities/mock-data';
 import { RouterTestingModule } from '@angular/router/testing';
+import { CartItemsComponent } from './cart-items.component';
+import { OrderItemModule } from './order-item/order-item.module';
+import { OrderItemComponent } from './order-item/order-item.component';
+import { PRODUCTS } from 'src/test-utilities/mock-data';
 
-describe('ProductsListComponent', () => {
-  let component: ProductsListComponent;
-  let fixture: ComponentFixture<ProductsListComponent>;
+describe('CartItemsComponent', () => {
+  let component: CartItemsComponent;
+  let fixture: ComponentFixture<CartItemsComponent>;
 
   beforeEach(
     waitForAsync(() => {
@@ -20,17 +20,17 @@ describe('ProductsListComponent', () => {
           CommonModule,
           RouterTestingModule,
           AlertMessageModule,
-          ProductListItemModule
+          OrderItemModule
         ],
         declarations: [
-          ProductsListComponent,
+          CartItemsComponent,
           AlertMessageComponent,
-          ProductListItemComponent
+          OrderItemComponent
         ]
       })
         .compileComponents()
         .then(() => {
-          fixture = TestBed.createComponent(ProductsListComponent);
+          fixture = TestBed.createComponent(CartItemsComponent);
           component = fixture.componentInstance;
         });
     })
@@ -40,8 +40,8 @@ describe('ProductsListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display an alert message when no products provided', () => {
-    component.products = [];
+  it('should display an alert message when no order items provvided', () => {
+    component.cartItems = [];
     fixture.detectChanges();
 
     const messageComponent = fixture.debugElement.query(
@@ -51,19 +51,18 @@ describe('ProductsListComponent', () => {
     expect(messageComponent).toBeTruthy();
     const message = messageComponent.query(By.css('.alert-message'));
     expect(message.nativeElement.textContent.trim()).toBe(
-      'Products were not found!'
+      'Your shopping cart is empty!'
     );
   });
 
   it('should display the products list', () => {
-    component.products = PRODUCTS;
+    const orderItems = PRODUCTS.map(product => ({ ...product, quantity: 1 }));
+    component.cartItems = orderItems;
     fixture.detectChanges();
 
-    const listItems = fixture.debugElement.queryAll(
-      By.css('.product-list-item')
-    );
+    const listItems = fixture.debugElement.queryAll(By.css('.cart-item'));
 
     expect(listItems).toBeTruthy();
-    expect(listItems.length).toEqual(PRODUCTS.length);
+    expect(listItems.length).toEqual(orderItems.length);
   });
 });

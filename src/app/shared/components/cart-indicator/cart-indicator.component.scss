@@ -6,6 +6,7 @@
 }
 
 .cart-link {
+  @apply inline-block;
   :hover {
     @apply bg-main-color-400;
   }

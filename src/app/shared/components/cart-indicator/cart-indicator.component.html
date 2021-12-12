@@ -1,7 +1,7 @@
 <ng-container *ngIf="numberOfItems$ | async as numberOfItems">
   <span *ngIf="numberOfItems" class="number-of-items">{{ numberOfItems }}</span>
 </ng-container>
-<a [routerLink]="['shoppingcart']" class="cart-link">
+<a [routerLink]="['/shoppingcart']" class="cart-link">
   <span class="cart-indicator">
     <i class="fas fa-shopping-basket"></i>
   </span>
