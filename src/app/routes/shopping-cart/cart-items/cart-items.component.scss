@@ -4,14 +4,10 @@
 }
 
 .cart-items-list {
-  @apply w-full relative p-2;
+  @apply w-full relative py-2 px-4 flex flex-col justify-start content-start items-center;
 }
 
 .cart-item {
-  @apply border-b border-gray-400 bg-white px-3 py-4;
+  @apply block w-full bg-white px-3 py-4 shadow-md m-2;
   max-width: 1020px;
-  margin: auto;
-  &:last-of-type {
-    border-bottom: none;
-  }
 }

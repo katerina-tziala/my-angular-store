@@ -18,8 +18,4 @@ export class CartComponent {
   public emptyCart(): void {
     this.cartService.emptyCart();
   }
-
-  public removeFromCart(id: number): void {
-    this.cartService.removeFromCart(id);
-  }
 }

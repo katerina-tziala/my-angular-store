@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { OrderItem, Product } from '../models/models';
+import { CartModalMessageService } from './cart-modal-message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,8 @@ export class CartService {
   private orderItems: BehaviorSubject<OrderItem[]> = new BehaviorSubject<
     OrderItem[]
   >([]);
+
+  constructor(private cartModalMessageService: CartModalMessageService) {}
 
   public get itemsInCart(): boolean {
     const items = [...this.orderItems.value];
@@ -35,6 +38,7 @@ export class CartService {
     const items = [...this.orderItems.value];
     items.push({ ...product, quantity: 1 });
     this.orderItems.next(items);
+    this.cartModalMessageService.addedInCart(product);
   }
 
   public getNumberOfItemsInOrder(orderItems: OrderItem[]): number {
@@ -58,11 +62,13 @@ export class CartService {
   }
 
   public removeFromCart(id: number): void {
-    if (!this.productInCart(id)) {
+    const orderItem = this.orderItems.value.find(product => product.id === id);
+    if (!orderItem) {
       return;
     }
     const items = [...this.orderItems.value].filter(item => item.id !== id);
     this.orderItems.next(items);
+    this.cartModalMessageService.removedFromCart(orderItem);
   }
 
   public updateItem(updatedItem: OrderItem): void {

@@ -1,0 +1,18 @@
+<ng-template #itemRemoved>
+  <h2>Removed from cart!</h2>
+</ng-template>
+
+
+
+<ng-container *ngIf="message$ | async as message">
+  <div *ngIf="message" class="modal-container">
+    <div class="modal-content">
+      <h2 *ngIf="messageForAddition(message); else itemRemoved">Added to cart!</h2>
+
+      <app-product-info class="message-item" [product]="message.item"></app-product-info>
+
+      <button type="button" class="modal-button" (click)="closeMessage()">ok</button>
+    </div>
+  </div>
+</ng-container>
+

@@ -1,6 +1,6 @@
 @import "../../../../assets/styles/product-styles.scss";
 :host {
-  @apply flex flex-wrap justify-center content-center items-center
+  @apply w-full flex flex-wrap justify-center content-center items-center
   sticky top-0
   bg-white border-b border-solid border-main-color-500
   shadow-md;

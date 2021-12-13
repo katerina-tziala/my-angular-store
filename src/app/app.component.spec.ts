@@ -3,6 +3,8 @@ import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { CartIndicatorComponent } from './shared/components/cart-indicator/cart-indicator.component';
+import { CartModalMessageComponent } from './shared/components/cart-modal-message/cart-modal-message.component';
+import { CartModalMessageModule } from './shared/components/cart-modal-message/cart-modal-message.module';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -11,8 +13,12 @@ describe('AppComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [RouterTestingModule],
-        declarations: [AppComponent, CartIndicatorComponent]
+        imports: [RouterTestingModule, CartModalMessageModule],
+        declarations: [
+          AppComponent,
+          CartIndicatorComponent,
+          CartModalMessageComponent
+        ]
       })
         .compileComponents()
         .then(() => {
@@ -48,5 +54,12 @@ describe('AppComponent', () => {
   it('should have a main section', () => {
     const main = fixture.debugElement.query(By.css('.app-content'));
     expect(main).toBeTruthy();
+  });
+
+  it('should have a cart modal message component', () => {
+    const childComponent = fixture.debugElement.query(
+      By.directive(CartModalMessageComponent)
+    );
+    expect(childComponent).toBeTruthy();
   });
 });

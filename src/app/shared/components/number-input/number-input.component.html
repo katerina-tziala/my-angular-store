@@ -13,7 +13,7 @@
   [minValue]="minValue"
   [maxValue]="maxValue"
   [(ngModel)]="value"
-  (keyup)="submitUpdatedValue()"
+  (ngModelChange)="submitUpdatedValue()"
 />
 <button
   type="button"

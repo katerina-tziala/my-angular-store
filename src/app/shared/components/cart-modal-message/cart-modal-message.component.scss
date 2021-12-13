@@ -1,0 +1,40 @@
+@import 'styles/button.scss';
+:host {
+  @apply relative;
+  z-index: 10;
+}
+
+.modal-container {
+  @apply absolute
+  w-screen
+  h-screen
+  flex
+  flex-col
+  justify-center
+  content-center
+  items-center
+  bg-modal-background
+  p-4;
+}
+
+.modal-content {
+  @apply bg-white shadow-md p-5 w-full
+  flex
+  flex-col
+  justify-start
+  content-start
+  items-center;
+  > h2 {
+    @apply text-2xl w-full font-medium;
+  }
+  max-width: 480px;
+}
+
+.modal-button {
+  @extend %button-main;
+  @apply uppercase;
+}
+
+.message-item {
+  @apply w-full my-6;
+}

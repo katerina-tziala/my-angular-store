@@ -32,3 +32,12 @@ export interface Order {
   customer: Customer;
   items: OrderItem[];
 }
+
+export enum CartMessageType {
+  Added = 'added',
+  Removed = 'removed'
+}
+export interface CartMessage {
+  type: CartMessageType;
+  item: Product | OrderItem;
+}

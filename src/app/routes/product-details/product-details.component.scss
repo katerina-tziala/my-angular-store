@@ -1,4 +1,8 @@
-@import "../../../assets/styles/product-styles.scss";
+@import '../../../assets/styles/product-styles.scss';
+
+:host {
+  @apply w-full h-full block bg-white;
+}
 
 .product-details-wrapper {
   @apply p-6;
@@ -27,20 +31,3 @@
     @apply uppercase;
   }
 }
-
-// .product-proto-container {
-//   @apply border-b border-solid border-main-color-500 p-3;
-//   > .product-photo {
-//     height: 200px;
-//   }
-// }
-
-// .price-button-wrapper {
-//   @apply flex flex-wrap justify-start items-center h-full w-full my-2;
-// }
-
-// .product-price {
-//   @extend %product-price;
-//   @apply mb-3;
-//   flex-grow: 1;
-// }

@@ -5,19 +5,19 @@
 }
 
 .products-list {
-  @apply grid
-  gap-0
+  @apply
+  w-full
+  h-full
+  grid
+  gap-4
   content-start
   grid-cols-1
   sm:grid-cols-2
   md:grid-cols-3
   xl:grid-cols-4
   2xl:grid-cols-5;
-  width: 100%;
-  height: 100%;
 }
 
 .product-list-item {
-  @apply bg-white text-black p-5;
-  display: block;
+  @apply block bg-white text-black p-3 pl-4 shadow-md;
 }

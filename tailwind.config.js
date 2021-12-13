@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'app-background': '#f2f2f2',
+        'modal-background': 'rgba(0, 0, 0, 0.4)',
         'main-color': {
           '400': '#178bb5',
           '500': '#33B5E5'
