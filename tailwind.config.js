@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+
 module.exports = {
   // mode: 'jit',
   purge: ['./src/**/*.{html,ts}'],
@@ -13,7 +14,7 @@ module.exports = {
           '500': '#33B5E5'
         },
         transparent: 'transparent',
-        gray: colors.blueGray,
+        gray: colors.gray,
         yellow: colors.amber,
         red: colors.red,
         green: colors.emerald,
