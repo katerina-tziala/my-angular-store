@@ -8,7 +8,12 @@ import { CartModalMessageModule } from './shared/components/cart-modal-message/c
 
 @NgModule({
   declarations: [AppComponent, CartIndicatorComponent],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, CartModalMessageModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    CartModalMessageModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

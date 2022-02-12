@@ -1,11 +1,8 @@
-/* tslint:disable:no-unused-variable */
-
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { ProductsService } from './products.service';
 import {
   HttpClientTestingModule,
-  HttpTestingController,
-  TestRequest
+  HttpTestingController
 } from '@angular/common/http/testing';
 import { Product } from '../models/models';
 import { PRODUCTS } from 'src/test-utilities/mock-data';
